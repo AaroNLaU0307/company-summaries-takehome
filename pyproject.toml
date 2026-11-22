@@ -5,6 +5,7 @@ description = "Build, experiment with and evaluate a system that summarises comp
 requires-python = ">=3.14,<3.15"
 dependencies = [
   "fastapi",
+  "httpx>=0.28.1",
   "pydantic",
   "uvicorn",
 ]
@@ -15,6 +16,7 @@ package = false
 [dependency-groups]
 dev = [
     "pyrefly>=1.4.1",
+    "pytest>=9.2.0",
     "ruff>=0.17.5",
 ]
 
