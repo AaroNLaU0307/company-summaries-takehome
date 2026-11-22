@@ -34,7 +34,7 @@ FLAG_PATTERNS: dict[str, list[str]] = {
         r"liabilities exceed(ed|ing)? (total )?assets",
         r"shareholders'? deficit",
         r"capital deficiency",
-        r"equity[^.\n]{0,30}(negative|deficit|-RM|-\s?\d)",
+        r"equity(?:[^.\n]|\.(?=\d)){0,30}(negative|deficit|-RM|-\s?\d)",
     ],
     "DEFENDANT_JUDGMENT": [r"judge?ments?"],
     "DEFENDANT_PENDING": [
@@ -48,30 +48,31 @@ FLAG_PATTERNS: dict[str, list[str]] = {
         r"\bloss(es)?\b",
         r"loss-making",
         r"unprofitable",
-        r"profit after tax[^.\n]{0,20}-",
+        r"profit after tax(?:[^.\n]|\.(?=\d)){0,20}-",
     ],
     "REVENUE_DECLINE": [
-        r"(revenue|sales|turnover)[^.\n]{0,60}(fell|fall|declin|drop|decreas|down|lower|shr[ai]nk|contract)",
-        r"(fell|fall|declin|drop|decreas|lower)\w*[^.\n]{0,40}(revenue|sales|turnover)",
+        r"(revenue|sales|turnover)(?:[^.\n]|\.(?=\d)){0,60}(fell|fall|declin|drop|decreas|down|lower|shr[ai]nk|contract)",
+        r"(fell|fall|declin|drop|decreas|lower)\w*(?:[^.\n]|\.(?=\d)){0,40}(revenue|sales|turnover)",
     ],
     "NEGATIVE_OPERATING_CASH_FLOW": [
-        r"(negative|outflow)[^.\n]{0,30}(operating )?cash",
-        r"operating cash[^.\n]{0,40}(negative|outflow|-RM|-\s?\d)",
+        r"(negative|outflow)(?:[^.\n]|\.(?=\d)){0,30}(operating )?cash",
+        r"operating cash(?:[^.\n]|\.(?=\d)){0,40}(negative|outflow|-RM|-\s?\d)",
         r"cash burn|burning cash",
     ],
     "WEAK_LIQUIDITY": [
-        r"(weak|low|poor|tight|strain|thin|limited)\w*[^.\n]{0,30}(liquidity|quick ratio)",
-        r"(liquidity|quick ratio)[^.\n]{0,40}(weak|low|below 1|under 1|tight|concern|pressure|strain|less than 1)",
+        r"(weak|low|poor|tight|strain|thin|limited)\w*(?:[^.\n]|\.(?=\d)){0,30}(liquidity|quick ratio)",
+        r"liquidity risk",
+        r"(liquidity|quick ratio)(?:[^.\n]|\.(?=\d)){0,40}(weak|low|below 1|under 1|tight|concern|pressure|strain|less than 1)",
     ],
     "DEBT_SERVICE_STRAIN": [
-        r"(interest cover|interest coverage|debt service|debt-service|dscr|icr)[^.\n]{0,60}"
+        r"(interest cover|interest coverage|debt service|debt-service|dscr|icr)(?:[^.\n]|\.(?=\d)){0,60}"
         r"(below|weak|low|negative|under|insufficient|strain|not cover|-\d)",
-        r"(weak|low|negative|insufficient|strain)\w*[^.\n]{0,40}(interest cover|debt service|debt-service|debt servic)",
+        r"(weak|low|negative|insufficient|strain)\w*(?:[^.\n]|\.(?=\d)){0,40}(interest cover|debt service|debt-service|debt servic)",
         r"(cannot|unable to|not enough to|insufficient to) (cover|service|meet)",
     ],
     "HIGH_LEVERAGE": [
-        r"(high|heavy|elevated|significant)\w*[^.\n]{0,20}(leverage|gearing|debt|liabilities)",
-        r"(leverage|gearing|liabilities[^.\n]{0,20}equity)[^.\n]{0,40}(high|\d+(\.\d+)?x|times)",
+        r"(high|heavy|elevated|significant)\w*(?:[^.\n]|\.(?=\d)){0,20}(leverage|gearing|debt|liabilities)",
+        r"(leverage|gearing|liabilities(?:[^.\n]|\.(?=\d)){0,20}equity)(?:[^.\n]|\.(?=\d)){0,40}(high|\d+(\.\d+)?x|times)",
         r"highly leveraged",
     ],
     "NO_FINANCIALS": [
@@ -92,7 +93,7 @@ FLAG_PATTERNS: dict[str, list[str]] = {
         r"\b[0-2] years? old",
     ],
     "SHORT_HISTORY": [
-        r"only (one|1|a single)[^.\n]{0,30}(year|fy)",
+        r"only (one|1|a single)(?:[^.\n]|\.(?=\d)){0,30}(year|fy)",
         r"single (financial )?year",
         r"one year of",
         r"only fy\s?20\d\d",
@@ -103,7 +104,7 @@ FLAG_PATTERNS: dict[str, list[str]] = {
     "DEFENDANT_CASES_CLOSED": [r"settled", r"dismissed", r"withdrawn", r"closed"],
 }
 
-NEGATION = re.compile(r"\b(no|not|without|never|nor)\b[^.\n]{0,12}$", flags=re.IGNORECASE)
+NEGATION = re.compile(r"\b(no|not|without|never|nor)\b(?:[^.\n]|\.(?=\d)){0,12}$", flags=re.IGNORECASE)
 
 
 def find_flag(flag_id: str, text: str) -> str | None:
@@ -133,7 +134,7 @@ CONTRADICTIONS = [
     (
         "says active but status is not active",
         lambda fs, c: c["profile"]["status"] != "Active",
-        r"(status[^.\n]{0,12}\bactive\b)|\bis active\b|\bactive company\b",
+        r"(status(?:[^.\n]|\.(?=\d)){0,12}\bactive\b)|\bis active\b|\bactive company\b",
     ),
     (
         "says positive or healthy equity but equity is negative",
@@ -143,7 +144,7 @@ CONTRADICTIONS = [
     (
         "says all audits clean but one is not",
         lambda fs, c: any(f.id == "NON_CLEAN_AUDIT" for f in fs.flags),
-        r"all[^.\n]{0,25}(unqualified|clean)|(unqualified|clean) (audit )?opinions? (in|for|across) all|consistently (unqualified|clean)",
+        r"all(?:[^.\n]|\.(?=\d)){0,25}(unqualified|clean)|(unqualified|clean) (audit )?opinions? (in|for|across) all|consistently (unqualified|clean)",
     ),
 ]
 

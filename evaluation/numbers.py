@@ -36,7 +36,7 @@ SKIP_PATTERNS = [
 SKIP_RE = re.compile("|".join(SKIP_PATTERNS), flags=re.IGNORECASE)
 
 NUM_RE = re.compile(
-    r"(?P<neg>[-−]\s?)?(?P<rm>RM\s?)?(?P<neg2>[-−])?(?P<num>\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?)"
+    r"(?P<neg>[-−]\s?)?(?P<rm>(?:RM|MYR)\s?)?(?P<neg2>[-−])?(?P<num>\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?)"
     r"(?P<unit>\s?(?:million|billion|thousand|mil|mn|bn|m|k)\b)?(?P<pct>\s?%|\s?percent\b)?(?P<x>x\b|\s?times\b)?",
     flags=re.IGNORECASE,
 )

@@ -116,4 +116,9 @@ Plus one free-text note per summary: "the biggest problem with this summary".
 
 ## Change log
 
-- (none yet)
+- 2026-11-22, after a 2-company trial run (SYN-000451, SYN-000545) and before the full runs were scored: two bug
+  fixes in the evaluation code, no change to the definition, the flags or the thresholds. (1) The number extractor
+  now reads "MYR" as well as "RM", because v1 wrote amounts as "MYR 13.0M". (2) The flag keyword patterns used
+  "[^.]" to stay inside one sentence, which stopped at the decimal point in "0.63", so "quick ratio 0.63 (below
+  1.0)" was missed. Patterns now allow a full stop followed by a digit. "liquidity risk" was added to the
+  weak-liquidity patterns.

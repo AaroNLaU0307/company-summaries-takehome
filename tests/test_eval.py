@@ -82,7 +82,7 @@ def test_bad_summary_numbers_flagged():
 
 def test_unit_and_rounding_tolerance():
     c = C["SYN-000029"]  # FY2024 revenue 5,352,856; gross margin 0.351
-    for text in ("RM 5.35m", "RM 5.4 million", "RM 5,352,856", "RM 5352.9k", "35.1%", "35%"):
+    for text in ("RM 5.35m", "RM 5.4 million", "RM 5,352,856", "RM 5352.9k", "MYR 5.35M", "35.1%", "35%"):
         assert all(m.matched for m in check_summary(text, c)), text
     assert not any(m.matched for m in check_summary("RM 5.29m", c))
 
@@ -125,3 +125,9 @@ def test_structure_length_verdict():
 
 def test_normalise():
     assert normalise("```markdown\nA " + chr(0x2014) + " B\n```") == "A, B"
+
+
+def test_patterns_span_decimals():
+    fs = build_facts(C["SYN-000451"])
+    hits = {f.flag_id: f.hit for f in flag_results("Quick ratio 0.63 in FY2024 (below 1.0).", fs)}
+    assert hits["WEAK_LIQUIDITY"]
