@@ -1,9 +1,9 @@
-"""House style: no em dash character in any file we write (including model output after normalisation)."""
+"""House style: no em dash character in any file we write (including model output after normalisation; raw cached responses in runs/ are exempt, they stay untouched)."""
 
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SKIP_DIRS = {".git", ".venv", "runs", "__pycache__", ".pytest_cache", ".ruff_cache"}
+SKIP_DIRS = {".git", ".venv", "runs", "runs_superseded", "__pycache__", ".pytest_cache", ".ruff_cache"}
 SUFFIXES = {".py", ".md", ".jsonl", ".csv", ".json", ".toml", ".txt"}
 
 
