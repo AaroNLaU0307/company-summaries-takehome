@@ -13,6 +13,7 @@
 import hashlib
 import json
 import os
+import re
 import sys
 import time
 from dataclasses import dataclass
@@ -34,6 +35,10 @@ KEY_PREFIX_BASE_URLS = {
 
 
 class LLMError(RuntimeError):
+    pass
+
+
+class QuotaExhausted(LLMError):
     pass
 
 
@@ -140,6 +145,14 @@ class CachedClient:
                 delay *= 2
                 continue
             elapsed = round(time.monotonic() - t0, 2)
+            if r.status_code == 429 and "PerDay" in r.text:
+                # A daily quota does not come back within minutes: stop the whole run instead of retrying.
+                limit = re.search(r'"quotaValue":\s*"(\d+)"', r.text)
+                quota_model = re.search(r'"model":\s*"([^"]+)"', r.text)
+                raise QuotaExhausted(
+                    f"daily quota reached (limit {limit.group(1) if limit else '?'} requests/day, "
+                    f"metered as {quota_model.group(1) if quota_model else '?'})"
+                )
             if r.status_code == 429 or r.status_code >= 500:
                 retry_after = r.headers.get("retry-after")
                 sleep_s = float(retry_after) if retry_after and retry_after.replace(".", "").isdigit() else delay

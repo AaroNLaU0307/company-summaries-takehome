@@ -1,0 +1,48 @@
+{
+  "version": "v1",
+  "item_id": "SYN-000333",
+  "request_hash": "790c0cb6033ab887",
+  "requested_at": "2026-11-22T22:52:28+0800",
+  "elapsed_s": 60.83,
+  "request": {
+    "model": "gemini-3.5-flash",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful analyst."
+      },
+      {
+        "role": "user",
+        "content": "A team vets companies before picking them as suppliers or project partners. Write a short summary of this company for them to read first, so they can decide whether it is worth a closer look. Use Markdown.\n\nCompany record (JSON):\n{\"registrationNumber\":\"SYN-000333\",\"profile\":{\"companyName\":\"Gemilang Harmoni Enterprise Sdn. Bhd.\",\"status\":\"Active\",\"companyType\":\"Private limited company\",\"incorporationDate\":\"1997-10-21\",\"industry\":\"Retail\",\"state\":\"Sarawak\",\"natureOfBusiness\":\"Retail of textiles and baju kurung\",\"shareCapital\":5000000,\"formerNames\":[{\"name\":\"Unity Industries Sdn. Bhd.\",\"changedOn\":\"2025-09-03\"}]},\"relationships\":{\"directors\":[{\"name\":\"Director 1\",\"designation\":\"Managing Director\",\"appointedOn\":\"2014-04-06\"},{\"name\":\"Director 2\",\"designation\":\"Director\",\"appointedOn\":\"2023-01-28\"},{\"name\":\"Director 3\",\"designation\":\"Director\",\"appointedOn\":\"2010-08-09\"}],\"shareholders\":[{\"type\":\"individual\",\"name\":\"Director 1\",\"percentage\":25.02},{\"type\":\"individual\",\"name\":\"Director 2\",\"percentage\":45.57},{\"type\":\"individual\",\"name\":\"Director 3\",\"percentage\":29.41}]},\"financials\":{\"years\":[]},\"litigation\":{\"cases\":[]}}"
+      }
+    ],
+    "temperature": 0.0,
+    "max_tokens": 4096
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "Here is a concise summary of the company to help your team decide on next steps.\n\n---\n\n# Company Profile: Gemilang Harmoni Enterprise Sdn. Bhd.\n\n**Registration No:** SYN-000333  \n**Status:** Active  \n**Recommendation:** **Worth a closer look**, subject to requesting audited financial statements (missing from record).\n\n---\n\n### Key Overview\n* **Business Activity:** Retail of textiles and traditional Malay apparel (*baju kurung*).\n* **Location:** Sarawak, Malaysia.\n* **Entity Type:** Private Limited Company (*Sdn. Bhd.*).\n* **Longevity:** Established in **October 1997** (over 26 years of operational history).\n* **Capital Base:** Share capital of **5,000,000** (MYR).\n\n### Ownership & Governance\n* **Structure:** 100% privately owned by its three active directors (closely held management).\n  * **Director 2:** Major Shareholder (45.57%) — Appointed 2023\n  * **Director 3:** Director & Shareholder (29.41%) — Appointed 2010\n  * **Director 1:** Managing Director & Shareholder (25.02%) — Appointed 2014\n\n### Key Vetting Observations\n\n#### Positive Indicators\n* **Established Track Record:** Long-standing presence in the market since 1997.\n* **Clear Legal Record:** No litigation cases on record.\n* **Substantial Capitalization:** Solid share capital base for a retail business.\n\n#### Items Requiring Further Due Diligence\n* **Missing Financial Data:** No financial performance records are included in this profile. Audited accounts (revenue, profitability, balance sheet health) must be requested directly.\n* **Recent Name Change:** Rebranded from *Unity Industries Sdn. Bhd.* on September 3, 2025. Confirm the rationale behind the name change to ensure it does not indicate a shift in core operations or hidden liabilities.\n\n---\n\n### Suggested Next Action\nProceed to **Phase 2 Due Diligence** with a focus on requesting financial reports and performing standard credit/background checks on the three director-shareholders.",
+          "extra_content": {
+            "google": {
+              "thought_signature": "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"
+            }
+          },
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1795359148,
+    "id": "cAEDa8KUGvXKv_gPrt6OyAM",
+    "model": "gemini-3.5-flash",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 478,
+      "prompt_tokens": 324,
+      "total_tokens": 1812
+    }
+  }
+}
