@@ -5,28 +5,28 @@ All versions are scored on the same 50 companies (those present in every version
 
 ## Headline metrics
 
-| Metric | v1 | v2 |
-|---|---|---|
-| Summaries scored | 50 | 50 |
-| Numbers checked (money, percent, ratio) | 909 | 477 |
-| Untraceable numbers (share) | 0.2% | 0.0% |
-| Untraceable numbers (count) | 2 | 0 |
-| Summaries with at least one untraceable number | 2 | 0 |
-| Negative control: share traceable against a different company | 12.1% | 13.8% |
-| Red-flag recall, high + medium | 79.1% | 98.8% |
-| Red-flag recall, high + medium (hits/flags) | 68/86 | 85/86 |
-| Red-flag recall, high only | 100.0% | 100.0% |
-| Red-flag recall, high only (hits/flags) | 14/14 | 14/14 |
-| Red-flag recall, low (context) | 37.5% | 55.0% |
-| Summaries mentioning every material flag | 34 | 49 |
-| Contradiction hits | 0 | 0 |
-| Words, median | 309.0 | 84.5 |
-| Words, min to max | 151 to 391 | 58 to 151 |
-| Length within 80 to 150 words | 0.0% | 58.0% |
-| Fixed structure present (asked for only in v2) | 0.0% | 100.0% |
-| Financials line labels its numbers (structured versions, added after reading v2) | 0/0 | 35/47 |
-| Summaries stating a triage verdict | 0 | 50 |
-| Verdict matches computed triage (of those stating one) | n/a | 100.0% |
+| Metric | v1 | v2 | v3 |
+|---|---|---|---|
+| Summaries scored | 50 | 50 | 50 |
+| Numbers checked (money, percent, ratio) | 909 | 477 | 506 |
+| Untraceable numbers (share) | 0.2% | 0.0% | 0.0% |
+| Untraceable numbers (count) | 2 | 0 | 0 |
+| Summaries with at least one untraceable number | 2 | 0 | 0 |
+| Negative control: share traceable against a different company | 12.1% | 13.8% | 15.2% |
+| Red-flag recall, high + medium | 79.1% | 98.8% | 100.0% |
+| Red-flag recall, high + medium (hits/flags) | 68/86 | 85/86 | 86/86 |
+| Red-flag recall, high only | 100.0% | 100.0% | 100.0% |
+| Red-flag recall, high only (hits/flags) | 14/14 | 14/14 | 14/14 |
+| Red-flag recall, low (context) | 37.5% | 55.0% | 62.5% |
+| Summaries mentioning every material flag | 34 | 49 | 50 |
+| Contradiction hits | 0 | 0 | 1 |
+| Words, median | 309.0 | 84.5 | 91.5 |
+| Words, min to max | 151 to 391 | 58 to 151 | 61 to 146 |
+| Length within 80 to 150 words | 0.0% | 58.0% | 80.0% |
+| Fixed structure present (asked for only in v2 and v3) | 0.0% | 100.0% | 100.0% |
+| Financials line labels its numbers (structured versions, added after reading v2) | 0/0 | 35/47 | 47/47 |
+| Summaries stating a triage verdict | 0 | 50 | 50 |
+| Verdict matches computed triage (of those stating one) | n/a | 100.0% | 100.0% |
 
 ## Hand checks (done by the Claude Code agent, not by Aaron)
 
@@ -66,3 +66,17 @@ None.
 ## v2: contradiction hits
 
 None.
+
+## v3: red-flag misses (high and medium)
+
+None.
+
+## v3: untraceable numbers
+
+None.
+
+## v3: contradiction hits
+
+- SYN-000545: says active but status is not active: '...ompany is facing a winding-up status and active insolvency petitions.
+
+  key...'

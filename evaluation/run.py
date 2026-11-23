@@ -170,7 +170,7 @@ def write_report(results: list[dict]) -> str:
         ("Words, median", "words_median"),
         ("Words, min to max", None),
         ("Length within 80 to 150 words", "length_compliance"),
-        ("Fixed structure present (asked for only in v2)", "structure_compliance"),
+        ("Fixed structure present (asked for only in v2 and v3)", "structure_compliance"),
         ("Financials line labels its numbers (structured versions, added after reading v2)", "financials_labelled_counts"),
         ("Summaries stating a triage verdict", "verdict_stated"),
         ("Verdict matches computed triage (of those stating one)", "verdict_agreement"),

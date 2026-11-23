@@ -1,0 +1,48 @@
+{
+  "version": "v3",
+  "item_id": "SYN-001298",
+  "request_hash": "e62e1e5178b75f26",
+  "requested_at": "2026-11-23T08:23:19+0800",
+  "elapsed_s": 3.13,
+  "request": {
+    "model": "gemini-3.5-flash-lite",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You write triage notes for a supplier-vetting team. The reader has 30 seconds to decide whether a company is worth a closer look. Risk signals come first. Accuracy matters more than style: one invented number makes every note useless.\n\nRules:\n1. Use only facts from the FACTS SHEET and the RECORD. Never invent numbers, causes, plans or outside context.\n2. Copy amounts and ratios as they are written in the FACTS SHEET (for example \"RM 5.35m\", \"0.63\"). Do not do new arithmetic.\n3. The Verdict line starts with the computed triage level exactly as given (High concern, Review or Low concern).\n4. Every [high] and [medium] red flag in the FACTS SHEET must appear under Key risks, most serious first, each with its key number (count, amount, ratio or year). Give each flag its own bullet. For litigation give counts and totals, not case numbers. Say which financial year a non-clean audit opinion was for.\n5. If there are no [high] or [medium] flags, write \"- None found in the record.\" under Key risks.\n6. If data is missing, say so in Data gaps. Never describe a trend that the data cannot show. There are no FY2025 figures.\n7. Mention recent director appointments, a recent name change or a corporate parent under People and ownership.\n8. Total length 80 to 150 words. Plain words, short sentences. No advice beyond the triage call. Do not use the em dash character; use commas, colons or full stops.\n\nWrite exactly this Markdown structure and nothing else:\n\n**Verdict:** <triage level>: <main reason in one sentence>.\n\n**Key risks:**\n- <flag with key number>\n\n**Financials:** FY<year>: revenue RM <x>, profit after tax RM <x>, equity RM <x>, quick ratio <x>; revenue change <x>% FY<prev> to FY<year>. (Write each label every time, as shown. If only one year: \"no trend, one year only\". If there are no statements: \"No financial statements filed.\")\n\n**People and ownership:** <directors, recent appointments, main shareholders, corporate parent>\n\n**Data gaps:** <what is missing, or \"None\">"
+      },
+      {
+        "role": "user",
+        "content": "FACTS SHEET (computed by code from the record) for Mutiara Delima Agro Sdn. Bhd. (SYN-001298)\nComputed triage level: Review\nRed flags, most serious first:\n- [medium] Net loss of -RM 3.66m in FY2024.\n- [medium] Negative operating cash flow of -RM 1.58m in FY2024.\n- [medium] Debt service strain in FY2024: interest coverage -2.25x (below 1.5), debt service coverage 0.22x (below 1.0).\nContext (low severity):\n- Only one year of financial statements (FY2024); no trend.\n- 1 of 4 director(s) appointed in the last 12 months: Director 2 (Independent Director, 2025-04-14).\n- Young company: incorporated 2023-04-11.\nKey numbers:\n- status: Active\n- industry: Agriculture\n- state: Kuala Lumpur\n- incorporated: 2023-04-11\n- share_capital: RM 250.0k\n- litigation: No court cases on record\n- financial_years: FY2024\n- latest_year: FY2024 (year end 2024-12-31)\n- latest_revenue: RM 74.30m\n- latest_profit_after_tax: -RM 3.66m\n- latest_total_equity: RM 66.07m\n- latest_operating_cash_flow: -RM 1.58m\n- latest_borrowings: RM 20.46m\n- latest_quick_ratio: 1.99\n- latest_interest_coverage: -2.25\n- latest_debt_service_coverage: 0.22\n- latest_liabilities_to_equity: 0.53\n- latest_net_profit_margin: -4.9%\n- audit_opinions: FY2024 Unqualified\n- directors: 4 director(s)\n- shareholders: Director 3 58.92%; Director 4 24.2%; Director 1 16.88%\nData gaps: Only FY2024 statements; no trend available.\n\nRECORD (JSON):\n{\"registrationNumber\":\"SYN-001298\",\"profile\":{\"companyName\":\"Mutiara Delima Agro Sdn. Bhd.\",\"status\":\"Active\",\"companyType\":\"Private limited company\",\"incorporationDate\":\"2023-04-11\",\"industry\":\"Agriculture\",\"state\":\"Kuala Lumpur\",\"natureOfBusiness\":\"Oil palm plantation and fresh fruit bunch supply\",\"shareCapital\":250000,\"formerNames\":[{\"name\":\"Sejahtera Resources Sdn. Bhd.\",\"changedOn\":\"2023-11-27\"}]},\"relationships\":{\"directors\":[{\"name\":\"Director 1\",\"designation\":\"Managing Director\",\"appointedOn\":\"2023-10-24\"},{\"name\":\"Director 2\",\"designation\":\"Independent Director\",\"appointedOn\":\"2025-04-14\"},{\"name\":\"Director 3\",\"designation\":\"Director\",\"appointedOn\":\"2024-11-28\"},{\"name\":\"Director 4\",\"designation\":\"Executive Director\",\"appointedOn\":\"2024-04-21\"}],\"shareholders\":[{\"type\":\"individual\",\"name\":\"Director 4\",\"percentage\":24.2},{\"type\":\"individual\",\"name\":\"Director 1\",\"percentage\":16.88},{\"type\":\"individual\",\"name\":\"Director 3\",\"percentage\":58.92}]},\"financials\":{\"years\":[{\"financialYear\":2024,\"financialYearEnd\":\"2024-12-31\",\"audit\":{\"firm\":\"Audit Firm 6\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":74303529,\"costOfSales\":58646332,\"grossProfit\":15657197,\"operatingExpenses\":18190326,\"operatingProfit\":-2533129,\"depreciation\":3468966,\"interestExpense\":1125446,\"profitBeforeTax\":-3658575,\"taxExpense\":0,\"profitAfterTax\":-3658575,\"cash\":10649316,\"tradeReceivables\":20168743,\"inventory\":16298145,\"currentAssets\":52183296,\"nonCurrentAssets\":49158553,\"totalAssets\":101341849,\"tradePayables\":8926032,\"borrowings\":20462654,\"currentLiabilities\":18007222,\"totalLiabilities\":35273473,\"totalEquity\":66068376,\"operatingCashFlow\":-1575359,\"capitalExpenditure\":5068597,\"borrowingsRepaid\":3209087},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.2107,\"operatingProfitMargin\":-0.0341,\"ebitda\":935837,\"ebitdaMargin\":0.0126,\"operatingExpenseRatio\":0.2448,\"netProfitMargin\":-0.0492,\"taxEfficiencyRatio\":null},\"liquidityAndCashFlow\":{\"quickRatio\":1.9928,\"cashRatio\":0.5914,\"cashToRevenueRatio\":0.1433,\"operatingCashFlow\":-1575359,\"operatingCashFlowMargin\":-0.0212,\"freeCashFlow\":-6643956,\"accrualRatio\":-0.0206},\"operationalEfficiency\":{\"cashConversionCycle\":144.9567,\"daysSalesOutstanding\":99.0746,\"daysInventoryOutstanding\":101.4355,\"daysPayablesOutstanding\":55.5534,\"inventoryTurnover\":3.5983,\"receivablesTurnover\":3.6841,\"assetTurnoverRatio\":0.7332,\"netWorkingCapital\":34176074},\"capitalStructure\":{\"leverageRatio\":0.5339,\"interestCoverageRatio\":-2.2508,\"fixedAssetComposition\":0.4851,\"depreciationToAssetRatio\":0.0342,\"debtServiceCoverageRatio\":0.2159}}}]},\"litigation\":{\"cases\":[]}}"
+      }
+    ],
+    "temperature": 0.0,
+    "max_tokens": 4096
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "**Verdict:** Review: Company shows net losses and cash flow strain in its only financial year.\n\n**Key risks:**\n- Net loss of -RM 3.66m in FY2024.\n- Negative operating cash flow of -RM 1.58m in FY2024.\n- Debt service strain in FY2024: interest coverage -2.25x (below 1.5), debt service coverage 0.22x (below 1.0).\n\n**Financials:** FY2024: revenue RM 74.30m, profit after tax RM -3.66m, equity RM 66.07m, quick ratio 1.99; no trend, one year only.\n\n**People and ownership:** Former name Sejahtera Resources Sdn. Bhd. changed on 2023-11-27. Director 2 appointed on 2025-04-14. Shareholders are Director 3 at 58.92%, Director 4 at 24.2%, and Director 1 at 16.88%. No corporate parent.\n\n**Data gaps:** Only FY2024 statements; no trend available.",
+          "extra_content": {
+            "google": {
+              "thought_signature": "Eo4BCosBAWkUfRMwYEals0UYLhCVKoWoGVXIrOjrvQPrX+0AR+77Q9MnfyZQsZ20dvr7P3nf6LZqk51JFpglVd+z/dRzq5tHHmJTAdyk1Wiapl94fZ7CVe9P5RRc/s6FEDXviU6esO5Ra2Nx4oA1vw5c8Ih7rlF6SkGF3dpmc/8D6/52tqxoHjubiAoi3DhQiA=="
+            }
+          },
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1795393399,
+    "id": "dIcDa_bXLsv7jNAPrPWv8A4",
+    "model": "gemini-3.5-flash-lite",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 268,
+      "prompt_tokens": 2001,
+      "total_tokens": 2269
+    }
+  }
+}
