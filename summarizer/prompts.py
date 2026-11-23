@@ -78,6 +78,25 @@ def v2_messages(company: dict) -> list[dict]:
     ]
 
 
-VERSIONS: dict[str, Callable[[dict], list[dict]]] = {"v1": v1_messages, "v2": v2_messages}
+# v3: one targeted change to v2. In v2, 12 of 47 Financials lines listed bare numbers ("RM 19.37m, RM 473.2k, ..."),
+# because the template line read like a list of slots. v3 spells out the labels in the template. Nothing else changes.
+V2_FINANCIALS_TEMPLATE = """**Financials:** <latest year: revenue, profit after tax, equity, quick ratio; revenue change where there are two years, \
+or "no financial statements filed">"""
+V3_FINANCIALS_TEMPLATE = """**Financials:** FY<year>: revenue RM <x>, profit after tax RM <x>, equity RM <x>, quick ratio <x>; revenue \
+change <x>% FY<prev> to FY<year>. (Write each label every time, as shown. If only one year: "no trend, one year only". \
+If there are no statements: "No financial statements filed.")"""
+assert V2_FINANCIALS_TEMPLATE in V2_SYSTEM
+V3_SYSTEM = V2_SYSTEM.replace(V2_FINANCIALS_TEMPLATE, V3_FINANCIALS_TEMPLATE)
+
+
+def v3_messages(company: dict) -> list[dict]:
+    facts = render_facts(build_facts(company))
+    return [
+        {"role": "system", "content": V3_SYSTEM},
+        {"role": "user", "content": V2_USER.format(facts=facts, record=_record_json(company))},
+    ]
+
+
+VERSIONS: dict[str, Callable[[dict], list[dict]]] = {"v1": v1_messages, "v2": v2_messages, "v3": v3_messages}
 # Versions that are asked for the fixed structure (structure compliance is only scored for these).
-STRUCTURED_VERSIONS = {"v2"}
+STRUCTURED_VERSIONS = {"v2", "v3"}
