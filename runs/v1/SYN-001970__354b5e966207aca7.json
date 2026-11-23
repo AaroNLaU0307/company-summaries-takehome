@@ -1,0 +1,48 @@
+{
+  "version": "v1",
+  "item_id": "SYN-001970",
+  "request_hash": "354b5e966207aca7",
+  "requested_at": "2026-11-23T08:17:50+0800",
+  "elapsed_s": 3.87,
+  "request": {
+    "model": "gemini-3.5-flash-lite",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful analyst."
+      },
+      {
+        "role": "user",
+        "content": "A team vets companies before picking them as suppliers or project partners. Write a short summary of this company for them to read first, so they can decide whether it is worth a closer look. Use Markdown.\n\nCompany record (JSON):\n{\"registrationNumber\":\"SYN-001970\",\"profile\":{\"companyName\":\"Teguh Sinar Food Sdn. Bhd.\",\"status\":\"Active\",\"companyType\":\"Private limited company\",\"incorporationDate\":\"2014-10-26\",\"industry\":\"Food & Beverage\",\"state\":\"Kuala Lumpur\",\"natureOfBusiness\":\"Wholesale distribution of frozen food to restaurants\",\"shareCapital\":2500000,\"formerNames\":[]},\"relationships\":{\"directors\":[{\"name\":\"Director 1\",\"designation\":\"Managing Director\",\"appointedOn\":\"2021-02-05\"},{\"name\":\"Director 2\",\"designation\":\"Director\",\"appointedOn\":\"2019-01-17\"},{\"name\":\"Director 3\",\"designation\":\"Independent Director\",\"appointedOn\":\"2020-06-04\"}],\"shareholders\":[{\"type\":\"individual\",\"name\":\"Director 1\",\"percentage\":62.56},{\"type\":\"individual\",\"name\":\"Director 2\",\"percentage\":37.44}]},\"financials\":{\"years\":[{\"financialYear\":2022,\"financialYearEnd\":\"2022-12-31\",\"audit\":{\"firm\":\"Audit Firm 2\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":18066455,\"costOfSales\":7277507,\"grossProfit\":10788948,\"operatingExpenses\":9473403,\"operatingProfit\":1315545,\"depreciation\":534805,\"interestExpense\":370433,\"profitBeforeTax\":945112,\"taxExpense\":226827,\"profitAfterTax\":718285,\"cash\":1708217,\"tradeReceivables\":4054804,\"inventory\":801161,\"currentAssets\":7949895,\"nonCurrentAssets\":19764364,\"totalAssets\":27714259,\"tradePayables\":1046356,\"borrowings\":6735142,\"currentLiabilities\":4375187,\"totalLiabilities\":10398074,\"totalEquity\":17316185,\"operatingCashFlow\":1615645,\"capitalExpenditure\":986383,\"borrowingsRepaid\":718669},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.5972,\"operatingProfitMargin\":0.0728,\"ebitda\":1850350,\"ebitdaMargin\":0.1024,\"operatingExpenseRatio\":0.5244,\"netProfitMargin\":0.0398,\"taxEfficiencyRatio\":0.76},\"liquidityAndCashFlow\":{\"quickRatio\":1.6339,\"cashRatio\":0.3904,\"cashToRevenueRatio\":0.0946,\"operatingCashFlow\":1615645,\"operatingCashFlowMargin\":0.0894,\"freeCashFlow\":629262,\"accrualRatio\":-0.0324},\"operationalEfficiency\":{\"cashConversionCycle\":69.6224,\"daysSalesOutstanding\":81.92,\"daysInventoryOutstanding\":40.1819,\"daysPayablesOutstanding\":52.4795,\"inventoryTurnover\":9.0837,\"receivablesTurnover\":4.4556,\"assetTurnoverRatio\":0.6519,\"netWorkingCapital\":3574708},\"capitalStructure\":{\"leverageRatio\":0.6005,\"interestCoverageRatio\":3.5514,\"fixedAssetComposition\":0.7131,\"depreciationToAssetRatio\":0.0193,\"debtServiceCoverageRatio\":1.699}}},{\"financialYear\":2024,\"financialYearEnd\":\"2024-12-31\",\"audit\":{\"firm\":\"Audit Firm 2\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":20207092,\"costOfSales\":9450706,\"grossProfit\":10756386,\"operatingExpenses\":9098850,\"operatingProfit\":1657536,\"depreciation\":598173,\"interestExpense\":414324,\"profitBeforeTax\":1243212,\"taxExpense\":298371,\"profitAfterTax\":944841,\"cash\":3732637,\"tradeReceivables\":4613804,\"inventory\":1225990,\"currentAssets\":11122333,\"nonCurrentAssets\":19875700,\"totalAssets\":30998033,\"tradePayables\":1420600,\"borrowings\":7533168,\"currentLiabilities\":5445425,\"totalLiabilities\":12483518,\"totalEquity\":18514515,\"operatingCashFlow\":2089111,\"capitalExpenditure\":736971,\"borrowingsRepaid\":632534},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.5323,\"operatingProfitMargin\":0.082,\"ebitda\":2255709,\"ebitdaMargin\":0.1116,\"operatingExpenseRatio\":0.4503,\"netProfitMargin\":0.0468,\"taxEfficiencyRatio\":0.76},\"liquidityAndCashFlow\":{\"quickRatio\":1.8174,\"cashRatio\":0.6855,\"cashToRevenueRatio\":0.1847,\"operatingCashFlow\":2089111,\"operatingCashFlowMargin\":0.1034,\"freeCashFlow\":1352140,\"accrualRatio\":-0.0369},\"operationalEfficiency\":{\"cashConversionCycle\":75.8229,\"daysSalesOutstanding\":83.339,\"daysInventoryOutstanding\":47.3495,\"daysPayablesOutstanding\":54.8656,\"inventoryTurnover\":7.7086,\"receivablesTurnover\":4.3797,\"assetTurnoverRatio\":0.6519,\"netWorkingCapital\":5676908},\"capitalStructure\":{\"leverageRatio\":0.6743,\"interestCoverageRatio\":4.0006,\"fixedAssetComposition\":0.6412,\"depreciationToAssetRatio\":0.0193,\"debtServiceCoverageRatio\":2.1547}}}]},\"litigation\":{\"cases\":[{\"caseNumber\":\"CASE-2025-9343\",\"role\":\"plaintiff\",\"caseType\":\"Debt recovery\",\"court\":\"Sessions Court (Kuala Lumpur)\",\"filedOn\":\"2025-07-04\",\"status\":\"Settled\",\"claimAmount\":208800.0},{\"caseNumber\":\"CASE-2024-3565\",\"role\":\"plaintiff\",\"caseType\":\"Debt recovery\",\"court\":\"Sessions Court (Kuala Lumpur)\",\"filedOn\":\"2024-09-22\",\"status\":\"Pending\",\"claimAmount\":403000.0},{\"caseNumber\":\"CASE-2024-0513\",\"role\":\"plaintiff\",\"caseType\":\"Debt recovery\",\"court\":\"Sessions Court (Kuala Lumpur)\",\"filedOn\":\"2024-08-11\",\"status\":\"Pending\",\"claimAmount\":400900.0},{\"caseNumber\":\"CASE-2023-4631\",\"role\":\"plaintiff\",\"caseType\":\"Debt recovery\",\"court\":\"Sessions Court (Kuala Lumpur)\",\"filedOn\":\"2023-03-23\",\"status\":\"Settled\",\"claimAmount\":362300.0},{\"caseNumber\":\"CASE-2022-4713\",\"role\":\"plaintiff\",\"caseType\":\"Breach of contract\",\"court\":\"Magistrates' Court (Kuala Lumpur)\",\"filedOn\":\"2022-03-23\",\"status\":\"Withdrawn\",\"claimAmount\":61300.0}]}}"
+      }
+    ],
+    "temperature": 0.0,
+    "max_tokens": 4096
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "### Company Profile: Teguh Sinar Food Sdn. Bhd.\n\n* **Registration Number:** SYN-001970  \n* **Incorporation Date:** 26 October 2014 (Active, Private Limited)  \n* **Location & Industry:** Kuala Lumpur | Food & Beverage (Wholesale distribution of frozen food to restaurants)  \n* **Share Capital:** MYR 2,500,000  \n* **Ownership:** Closely held between two individual shareholders—Director 1 (62.56%) and Director 2 (37.44%).\n\n---\n\n### Key Financial Highlights (FY2022 vs. FY2024)\n\n* **Revenue Growth:** Increased from **MYR 18.07M** (2022) to **MYR 20.21M** (2024).\n* **Profitability:** \n  * Gross profit margins remain healthy (~53% to 60%). \n  * Net profit after tax improved from **MYR 718.3K** (3.98% margin) to **MYR 944.8K** (4.68% margin).\n* **Cash Flow & Liquidity:** \n  * Strong liquidity position with a current quick ratio of **1.82** (FY2024) and growing cash reserves (**MYR 3.73M** in 2024).\n  * Consistently positive operating cash flow, growing from MYR 1.62M to **MYR 2.09M**.\n* **Audit Standing:** Clean, **unqualified audit opinions** for both years (Audit Firm 2).\n\n---\n\n### Litigation & Risk Overview\n\nThe company has been involved in **5 legal cases** in Kuala Lumpur courts since 2022. However, context is vital:\n* **Plaintiff Role:** Teguh Sinar Food acted as the **plaintiff** in all instances (initiating action rather than defending claims against them).\n* **Nature of Cases:** Primarily **debt recovery** (four cases totaling over MYR 1.37M in claims) and one minor breach of contract (withdrawn). \n* **Status:** Two cases are settled, two are pending, and one was withdrawn. The debt recovery filings suggest they actively pursue delinquent restaurant clients, which aligns with standard credit risks in the food wholesale sector.\n\n---\n\n### Recommendation for Vetting Team\n\n* **Worth a Closer Look:** **Yes.** \n* **Rationale:** The company demonstrates steady top-line growth, solid liquidity, healthy margins, and clean audits. \n* **Key Focus Areas for Deep Dive:** Review their credit control and accounts receivable policies (Days Sales Outstanding averages ~83 days) to understand why they frequently resort to legal debt recovery against their client base.",
+          "extra_content": {
+            "google": {
+              "thought_signature": "Eo4BCosBAWkUfRNgeRuHhjPuvJzGKivF4XRDZ0tQ/IYObacoWyApw/TrcN1ANnLoeyLkEcxKND7ZD0S2W+pxVEjeBYQArb/ujWgbXBIEojLOjyn/OmtFOESXemKlsKj/H3O+xdvcgwY4qKchX9sU5Zce5sY69nXgk+lbP/M1oK0h1paEkCIa5E9aC/SuBK/Xng=="
+            }
+          },
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1795393070,
+    "id": "K4YDa4jMFKiL694Px_2NCA",
+    "model": "gemini-3.5-flash-lite",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 615,
+      "prompt_tokens": 1907,
+      "total_tokens": 2522
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "version": "v1",
+  "item_id": "SYN-001203",
+  "request_hash": "1e15696429e514c4",
+  "requested_at": "2026-11-23T08:07:37+0800",
+  "elapsed_s": 3.32,
+  "request": {
+    "model": "gemini-3.5-flash-lite",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful analyst."
+      },
+      {
+        "role": "user",
+        "content": "A team vets companies before picking them as suppliers or project partners. Write a short summary of this company for them to read first, so they can decide whether it is worth a closer look. Use Markdown.\n\nCompany record (JSON):\n{\"registrationNumber\":\"SYN-001203\",\"profile\":{\"companyName\":\"Pacific Seri Freight Sdn. Bhd.\",\"status\":\"Active\",\"companyType\":\"Private limited company\",\"incorporationDate\":\"2007-06-08\",\"industry\":\"Logistics\",\"state\":\"Selangor\",\"natureOfBusiness\":\"Cold chain transport and storage of frozen goods\",\"shareCapital\":5000000,\"formerNames\":[]},\"relationships\":{\"directors\":[{\"name\":\"Director 1\",\"designation\":\"Managing Director\",\"appointedOn\":\"2010-12-12\"},{\"name\":\"Director 2\",\"designation\":\"Director\",\"appointedOn\":\"2018-06-21\"}],\"shareholders\":[{\"type\":\"company\",\"name\":\"Gemilang Holdings Sdn. Bhd.\",\"registrationNumber\":\"SYN-008766\",\"incorporatedIn\":\"Malaysia\",\"percentage\":70.0},{\"type\":\"individual\",\"name\":\"Director 2\",\"percentage\":19.45},{\"type\":\"individual\",\"name\":\"Director 1\",\"percentage\":10.55}]},\"financials\":{\"years\":[]},\"litigation\":{\"cases\":[{\"caseNumber\":\"CASE-2023-0273\",\"role\":\"plaintiff\",\"caseType\":\"Breach of contract\",\"court\":\"Magistrates' Court (Selangor)\",\"filedOn\":\"2023-09-24\",\"status\":\"Settled\",\"claimAmount\":22500.0}]}}"
+      }
+    ],
+    "temperature": 0.0,
+    "max_tokens": 4096
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "### Company Profile: Pacific Seri Freight Sdn. Bhd.\n\n* **Registration Number:** SYN-001203\n* **Status / Type:** Active | Private Limited Company\n* **Incorporation Date:** June 8, 2007 (Selangor)\n* **Industry & Focus:** Logistics — Cold chain transport and storage of frozen goods\n* **Share Capital:** 5,000,000 MYR\n\n---\n\n#### Ownership & Governance\n* **Major Shareholder:** Gemilang Holdings Sdn. Bhd. (70.0%)\n* **Individual Shareholders:** Director 2 (19.45%), Director 1 (10.55%)\n* **Leadership:** Managed by Director 1 (Managing Director, since 2010) and Director 2 (Director, since 2018).\n\n#### Litigation & Risk Note\n* **Past Disputes:** 1 settled breach of contract case filed in 2023 in the Magistrates' Court of Selangor, where the company acted as the **plaintiff** (claim amount: 22,500 MYR). \n\n#### Analyst Recommendation\n* **Worth a closer look?** **Yes.** Pacific Seri Freight is a well-established player in the niche cold-chain logistics sector with stable, long-term operations since 2007 and solid capital backing. Financial records were not provided in the dataset, and further due diligence on current operating financials and credit checks is recommended.",
+          "extra_content": {
+            "google": {
+              "thought_signature": "Eo4BCosBAWkUfRN3kiI/gXLlBCOSZ2Hix/FPFcQmg7FggZrFJKB7TqN2CBHSqxW4PdPFhTWQwfBgy6M4OtxKofir59MLqA0Rit0pxGhB9+2j/mqOtn+rZk9I6B04Gs63bYNl6VdYNTMlIFN1DacuFOVzckIFA/2I93U2v6H98RRlec0osc8w9qPmpufdZapImg=="
+            }
+          },
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1795392457,
+    "id": "xoMDa8maEJjeg8UPqIvYiA0",
+    "model": "gemini-3.5-flash-lite",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 313,
+      "prompt_tokens": 365,
+      "total_tokens": 678
+    }
+  }
+}

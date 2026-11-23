@@ -131,3 +131,14 @@ def test_patterns_span_decimals():
     fs = build_facts(C["SYN-000451"])
     hits = {f.flag_id: f.hit for f in flag_results("Quick ratio 0.63 in FY2024 (below 1.0).", fs)}
     assert hits["WEAK_LIQUIDITY"]
+
+
+def test_checker_fixes_after_hand_check():
+    c = C["SYN-001569"]  # FY2022 operating cash flow 320,578
+    assert all(m.matched for m in check_summary("RM 320k", c))  # truncated, not rounded
+    c = C["SYN-000657"]  # FY2024 operating cash flow -4,455,929
+    assert all(m.matched for m in check_summary(r"$-4.46\text{M}$", c))
+    assert extract_numbers("Incorporated 20.11.2017") == []
+    fs = build_facts(C["SYN-001618"])
+    hits = {f.flag_id: f.hit for f in flag_results("Operating cash flow was negative.", fs)}
+    assert hits["WEAK_LIQUIDITY"] is None  # "low" inside "flow" must not count

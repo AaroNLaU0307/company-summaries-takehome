@@ -60,18 +60,18 @@ FLAG_PATTERNS: dict[str, list[str]] = {
         r"cash burn|burning cash",
     ],
     "WEAK_LIQUIDITY": [
-        r"(weak|low|poor|tight|strain|thin|limited)\w*(?:[^.\n]|\.(?=\d)){0,30}(liquidity|quick ratio)",
+        r"\b(weak|low|poor|tight|strain|thin|limited)\w*(?:[^.\n]|\.(?=\d)){0,30}(liquidity|quick ratio)",
         r"liquidity risk",
-        r"(liquidity|quick ratio)(?:[^.\n]|\.(?=\d)){0,40}(weak|low|below 1|under 1|tight|concern|pressure|strain|less than 1)",
+        r"(liquidity|quick ratio)(?:[^.\n]|\.(?=\d)){0,40}(?<![a-z])(weak|low|below 1|under 1|tight|concern|pressure|strain|less than 1)",
     ],
     "DEBT_SERVICE_STRAIN": [
         r"(interest cover|interest coverage|debt service|debt-service|dscr|icr)(?:[^.\n]|\.(?=\d)){0,60}"
-        r"(below|weak|low|negative|under|insufficient|strain|not cover|-\d)",
-        r"(weak|low|negative|insufficient|strain)\w*(?:[^.\n]|\.(?=\d)){0,40}(interest cover|debt service|debt-service|debt servic)",
+        r"(?<![a-z])(below|weak|low|negative|under|insufficient|strain|not cover|-\d)",
+        r"\b(weak|low|negative|insufficient|strain)\w*(?:[^.\n]|\.(?=\d)){0,40}(interest cover|debt service|debt-service|debt servic)",
         r"(cannot|unable to|not enough to|insufficient to) (cover|service|meet)",
     ],
     "HIGH_LEVERAGE": [
-        r"(high|heavy|elevated|significant)\w*(?:[^.\n]|\.(?=\d)){0,20}(leverage|gearing|debt|liabilities)",
+        r"\b(high|heavy|elevated|significant)\w*(?:[^.\n]|\.(?=\d)){0,20}(leverage|gearing|debt|liabilities)",
         r"(leverage|gearing|liabilities(?:[^.\n]|\.(?=\d)){0,20}equity)(?:[^.\n]|\.(?=\d)){0,40}(high|\d+(\.\d+)?x|times)",
         r"highly leveraged",
     ],
@@ -203,3 +203,15 @@ def flag_results(text: str, fs: FactsSheet) -> list[FlagResult]:
         seen.add(f.id)
         out.append(FlagResult(f.id, f.severity, find_flag(f.id, text)))
     return out
+
+
+FINANCIALS_LABELS = ("revenue", "profit", "equity", "quick")
+
+
+def financials_labelled(text: str) -> bool | None:
+    """Structured versions only: does the Financials line name what each number is? None if there is no such line."""
+    m = re.search(r"financials[^:\n]*:(.*)", text.replace("*", ""), flags=re.IGNORECASE)
+    if not m:
+        return None
+    line = m.group(1).lower()
+    return all(label in line for label in FINANCIALS_LABELS)

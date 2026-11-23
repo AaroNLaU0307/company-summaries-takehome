@@ -1,0 +1,48 @@
+{
+  "version": "v1",
+  "item_id": "SYN-000302",
+  "request_hash": "e7c7dd6e515aa8c0",
+  "requested_at": "2026-11-23T08:10:18+0800",
+  "elapsed_s": 4.02,
+  "request": {
+    "model": "gemini-3.5-flash-lite",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful analyst."
+      },
+      {
+        "role": "user",
+        "content": "A team vets companies before picking them as suppliers or project partners. Write a short summary of this company for them to read first, so they can decide whether it is worth a closer look. Use Markdown.\n\nCompany record (JSON):\n{\"registrationNumber\":\"SYN-000302\",\"profile\":{\"companyName\":\"Global Pacific Perunding Sdn. Bhd.\",\"status\":\"Active\",\"companyType\":\"Private limited company\",\"incorporationDate\":\"2014-01-15\",\"industry\":\"Professional Services\",\"state\":\"Perak\",\"natureOfBusiness\":\"Management consulting for SMEs\",\"shareCapital\":500000,\"formerNames\":[]},\"relationships\":{\"directors\":[{\"name\":\"Director 1\",\"designation\":\"Managing Director\",\"appointedOn\":\"2021-04-15\"},{\"name\":\"Director 2\",\"designation\":\"Director\",\"appointedOn\":\"2024-05-01\"},{\"name\":\"Director 3\",\"designation\":\"Executive Director\",\"appointedOn\":\"2018-03-25\"}],\"shareholders\":[{\"type\":\"individual\",\"name\":\"Director 1\",\"percentage\":11.54},{\"type\":\"individual\",\"name\":\"Director 3\",\"percentage\":29.76},{\"type\":\"individual\",\"name\":\"Director 2\",\"percentage\":58.7}]},\"financials\":{\"years\":[]},\"litigation\":{\"cases\":[]}}"
+      }
+    ],
+    "temperature": 0.0,
+    "max_tokens": 4096
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "### Executive Summary: Global Pacific Perunding Sdn. Bhd.\n\n**Quick Take:** A moderately capitalized, active private limited management consultancy in Perak. With a straightforward ownership structure and no recorded litigation, the company presents a clean initial profile and is **worth a closer look** depending on your specific project needs.\n\n---\n\n#### Key Company Details\n* **Registration Number:** SYN-000302\n* **Status & Type:** Active | Private Limited Company\n* **Incorporation Date:** January 15, 2014 *(10+ years in operation)*\n* **Industry & Focus:** Professional Services | Management consulting for SMEs\n* **Location:** Perak\n* **Share Capital:** 500,000\n\n#### Ownership & Leadership\n* **Management:** Led by three directors, including the Managing Director (appointed April 2021), an Executive Director (appointed March 2018), and a recently added Director (appointed May 2024).\n* **Shareholders:** 100% privately held across the three directors:\n  * **Director 2:** 58.70%\n  * **Director 3:** 29.76%\n  * **Director 1:** 11.54%\n\n#### Risk & Compliance Snapshot\n* **Litigation:** No recorded legal cases.\n* **Financial History:** Historical financial statements are currently unlisted in the provided record.\n\n---\n*Recommendation: Proceed to a secondary review (requesting direct financial disclosures and past project portfolios) if SME management consulting services are required.*",
+          "extra_content": {
+            "google": {
+              "thought_signature": "Eo4BCosBAWkUfRPimgXvc0XzJXHl71+H+GEGUpv1ZfvdsElynb/GulGRBvFKhnbCqOZd8eUgbMZxhRTL1KaNym24X+q0shrRDn1byLWG3Q1G5ADC9/qBJ+whygFjhSWOxzBWBmSOBnbVMxwxe+amWv98SBpYORw1/L+v+TG8mcfQdixEeVFHjcFf9fyGi4Nm0Q=="
+            }
+          },
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1795392618,
+    "id": "Z4QDa_2iAdyA694Pzp-o0QM",
+    "model": "gemini-3.5-flash-lite",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 335,
+      "prompt_tokens": 297,
+      "total_tokens": 632
+    }
+  }
+}

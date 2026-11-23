@@ -1,0 +1,48 @@
+{
+  "version": "v1",
+  "item_id": "SYN-000333",
+  "request_hash": "12f0aaa8dbcbc96e",
+  "requested_at": "2026-11-23T08:10:31+0800",
+  "elapsed_s": 3.77,
+  "request": {
+    "model": "gemini-3.5-flash-lite",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful analyst."
+      },
+      {
+        "role": "user",
+        "content": "A team vets companies before picking them as suppliers or project partners. Write a short summary of this company for them to read first, so they can decide whether it is worth a closer look. Use Markdown.\n\nCompany record (JSON):\n{\"registrationNumber\":\"SYN-000333\",\"profile\":{\"companyName\":\"Gemilang Harmoni Enterprise Sdn. Bhd.\",\"status\":\"Active\",\"companyType\":\"Private limited company\",\"incorporationDate\":\"1997-10-21\",\"industry\":\"Retail\",\"state\":\"Sarawak\",\"natureOfBusiness\":\"Retail of textiles and baju kurung\",\"shareCapital\":5000000,\"formerNames\":[{\"name\":\"Unity Industries Sdn. Bhd.\",\"changedOn\":\"2025-09-03\"}]},\"relationships\":{\"directors\":[{\"name\":\"Director 1\",\"designation\":\"Managing Director\",\"appointedOn\":\"2014-04-06\"},{\"name\":\"Director 2\",\"designation\":\"Director\",\"appointedOn\":\"2023-01-28\"},{\"name\":\"Director 3\",\"designation\":\"Director\",\"appointedOn\":\"2010-08-09\"}],\"shareholders\":[{\"type\":\"individual\",\"name\":\"Director 1\",\"percentage\":25.02},{\"type\":\"individual\",\"name\":\"Director 2\",\"percentage\":45.57},{\"type\":\"individual\",\"name\":\"Director 3\",\"percentage\":29.41}]},\"financials\":{\"years\":[]},\"litigation\":{\"cases\":[]}}"
+      }
+    ],
+    "temperature": 0.0,
+    "max_tokens": 4096
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "### Company Vet Summary: Gemilang Harmoni Enterprise Sdn. Bhd.\n\n* **Status:** Active (Incorporated: Oct 21, 1997)\n* **Registration No.:** SYN-000333\n* **Industry & Location:** Retail (Textiles and *baju kurung*) | Sarawak, Malaysia\n* **Share Capital:** RM 5,000,000\n* **Recent Notable Update:** Changed its name from *Unity Industries Sdn. Bhd.* on September 3, 2025.\n\n#### Ownership & Governance\n* **Leadership:** Managed by three directors (Managing Director appointed in 2014, with two additional directors joining in 2010 and 2023).\n* **Shareholding Structure:** Closely held among the three directors:\n  * Director 2: 45.57%\n  * Director 3: 29.41%\n  * Director 1: 25.02%\n\n#### Risk & Compliance Quick-Check\n* **Financials:** No historical financial data available in the current record.\n* **Litigation:** No recorded legal cases.\n\n> **Recommendation for Closer Look:** The company has a long operational history (since 1997) and stable, concentrated ownership. However, due to the lack of financial records and a very recent name change (September 2025), further due diligence regarding their current financial health and the reason for the corporate rebranding is recommended before proceeding.",
+          "extra_content": {
+            "google": {
+              "thought_signature": "Eo4BCosBAWkUfRPlQimGkgpp7ftRmFqgJparSaWmwUS+3GKIXVKJhenLDLqP3K4OMaIx9aYeAqoSZ9NgqAzxg7aEUFw7rS3rApV4A9TbXes726D+AA1iJbxCmBsj+V9AetGWyPe/l3IEfNvhD3Ld5VY4HGPBJUM33Y00TS2mfHQ8oXhmGFIcOBOdvCgs7oBRWw=="
+            }
+          },
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1795392631,
+    "id": "c4QDa872OfCC694PtcCkgAw",
+    "model": "gemini-3.5-flash-lite",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 325,
+      "prompt_tokens": 324,
+      "total_tokens": 649
+    }
+  }
+}

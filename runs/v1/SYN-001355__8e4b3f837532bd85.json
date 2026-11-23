@@ -1,0 +1,48 @@
+{
+  "version": "v1",
+  "item_id": "SYN-001355",
+  "request_hash": "8e4b3f837532bd85",
+  "requested_at": "2026-11-23T08:15:15+0800",
+  "elapsed_s": 4.52,
+  "request": {
+    "model": "gemini-3.5-flash-lite",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful analyst."
+      },
+      {
+        "role": "user",
+        "content": "A team vets companies before picking them as suppliers or project partners. Write a short summary of this company for them to read first, so they can decide whether it is worth a closer look. Use Markdown.\n\nCompany record (JSON):\n{\"registrationNumber\":\"SYN-001355\",\"profile\":{\"companyName\":\"Teguh Cahaya Medical Sdn. Bhd.\",\"status\":\"Active\",\"companyType\":\"Private limited company\",\"incorporationDate\":\"1991-04-09\",\"industry\":\"Healthcare\",\"state\":\"Kuala Lumpur\",\"natureOfBusiness\":\"Farmasi komuniti dan makanan tambahan\",\"shareCapital\":5000000,\"formerNames\":[]},\"relationships\":{\"directors\":[{\"name\":\"Director 1\",\"designation\":\"Managing Director\",\"appointedOn\":\"2016-10-31\"},{\"name\":\"Director 2\",\"designation\":\"Independent Director\",\"appointedOn\":\"2004-11-12\"}],\"shareholders\":[{\"type\":\"individual\",\"name\":\"Director 1\",\"percentage\":100.0}]},\"financials\":{\"years\":[{\"financialYear\":2022,\"financialYearEnd\":\"2022-12-31\",\"audit\":{\"firm\":\"Audit Firm 6\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":40017040,\"costOfSales\":22483892,\"grossProfit\":17533148,\"operatingExpenses\":12418655,\"operatingProfit\":5114493,\"depreciation\":2290376,\"interestExpense\":340092,\"profitBeforeTax\":4774401,\"taxExpense\":1145856,\"profitAfterTax\":3628545,\"cash\":1947126,\"tradeReceivables\":6401658,\"inventory\":5730579,\"currentAssets\":15685997,\"nonCurrentAssets\":16446684,\"totalAssets\":32132681,\"tradePayables\":4612520,\"borrowings\":6183493,\"currentLiabilities\":7905498,\"totalLiabilities\":13671874,\"totalEquity\":18460807,\"operatingCashFlow\":4849810,\"capitalExpenditure\":2303743,\"borrowingsRepaid\":1032620},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.4381,\"operatingProfitMargin\":0.1278,\"ebitda\":7404869,\"ebitdaMargin\":0.185,\"operatingExpenseRatio\":0.3103,\"netProfitMargin\":0.0907,\"taxEfficiencyRatio\":0.76},\"liquidityAndCashFlow\":{\"quickRatio\":1.2593,\"cashRatio\":0.2463,\"cashToRevenueRatio\":0.0487,\"operatingCashFlow\":4849810,\"operatingCashFlowMargin\":0.1212,\"freeCashFlow\":2546067,\"accrualRatio\":-0.038},\"operationalEfficiency\":{\"cashConversionCycle\":76.5407,\"daysSalesOutstanding\":58.3903,\"daysInventoryOutstanding\":93.0293,\"daysPayablesOutstanding\":74.8789,\"inventoryTurnover\":3.9235,\"receivablesTurnover\":6.251,\"assetTurnoverRatio\":1.2454,\"netWorkingCapital\":7780499},\"capitalStructure\":{\"leverageRatio\":0.7406,\"interestCoverageRatio\":15.0386,\"fixedAssetComposition\":0.5118,\"depreciationToAssetRatio\":0.0713,\"debtServiceCoverageRatio\":5.3943}}},{\"financialYear\":2023,\"financialYearEnd\":\"2023-12-31\",\"audit\":{\"firm\":\"Audit Firm 6\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":33046929,\"costOfSales\":18023305,\"grossProfit\":15023624,\"operatingExpenses\":12778723,\"operatingProfit\":2244901,\"depreciation\":1891442,\"interestExpense\":280855,\"profitBeforeTax\":1964046,\"taxExpense\":471371,\"profitAfterTax\":1492675,\"cash\":2424653,\"tradeReceivables\":5559502,\"inventory\":4956341,\"currentAssets\":14267289,\"nonCurrentAssets\":14535817,\"totalAssets\":28803106,\"tradePayables\":4190965,\"borrowings\":5106461,\"currentLiabilities\":5722903,\"totalLiabilities\":9297426,\"totalEquity\":19505680,\"operatingCashFlow\":2419305,\"capitalExpenditure\":1298947,\"borrowingsRepaid\":785825},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.4546,\"operatingProfitMargin\":0.0679,\"ebitda\":4136343,\"ebitdaMargin\":0.1252,\"operatingExpenseRatio\":0.3867,\"netProfitMargin\":0.0452,\"taxEfficiencyRatio\":0.76},\"liquidityAndCashFlow\":{\"quickRatio\":1.627,\"cashRatio\":0.4237,\"cashToRevenueRatio\":0.0734,\"operatingCashFlow\":2419305,\"operatingCashFlowMargin\":0.0732,\"freeCashFlow\":1120358,\"accrualRatio\":-0.0322},\"operationalEfficiency\":{\"cashConversionCycle\":76.9041,\"daysSalesOutstanding\":61.4041,\"daysInventoryOutstanding\":100.3736,\"daysPayablesOutstanding\":84.8736,\"inventoryTurnover\":3.6364,\"receivablesTurnover\":5.9442,\"assetTurnoverRatio\":1.1473,\"netWorkingCapital\":8544386},\"capitalStructure\":{\"leverageRatio\":0.4767,\"interestCoverageRatio\":7.9931,\"fixedAssetComposition\":0.5047,\"depreciationToAssetRatio\":0.0657,\"debtServiceCoverageRatio\":3.8778}}},{\"financialYear\":2024,\"financialYearEnd\":\"2024-12-31\",\"audit\":{\"firm\":\"Audit Firm 6\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":26191548,\"costOfSales\":15421232,\"grossProfit\":10770316,\"operatingExpenses\":9867092,\"operatingProfit\":903224,\"depreciation\":1499074,\"interestExpense\":222594,\"profitBeforeTax\":680630,\"taxExpense\":163351,\"profitAfterTax\":517279,\"cash\":2816477,\"tradeReceivables\":3536821,\"inventory\":4837091,\"currentAssets\":12241947,\"nonCurrentAssets\":14939241,\"totalAssets\":27181188,\"tradePayables\":3266255,\"borrowings\":4047158,\"currentLiabilities\":4480402,\"totalLiabilities\":7313413,\"totalEquity\":19867775,\"operatingCashFlow\":2674993,\"capitalExpenditure\":1421968,\"borrowingsRepaid\":632721},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.4112,\"operatingProfitMargin\":0.0345,\"ebitda\":2402298,\"ebitdaMargin\":0.0917,\"operatingExpenseRatio\":0.3767,\"netProfitMargin\":0.0197,\"taxEfficiencyRatio\":0.76},\"liquidityAndCashFlow\":{\"quickRatio\":1.6527,\"cashRatio\":0.6286,\"cashToRevenueRatio\":0.1075,\"operatingCashFlow\":2674993,\"operatingCashFlowMargin\":0.1021,\"freeCashFlow\":1253025,\"accrualRatio\":-0.0794},\"operationalEfficiency\":{\"cashConversionCycle\":86.468,\"daysSalesOutstanding\":49.2884,\"daysInventoryOutstanding\":114.4875,\"daysPayablesOutstanding\":77.3079,\"inventoryTurnover\":3.1881,\"receivablesTurnover\":7.4054,\"assetTurnoverRatio\":0.9636,\"netWorkingCapital\":7761545},\"capitalStructure\":{\"leverageRatio\":0.3681,\"interestCoverageRatio\":4.0577,\"fixedAssetComposition\":0.5496,\"depreciationToAssetRatio\":0.0552,\"debtServiceCoverageRatio\":2.8087}}}]},\"litigation\":{\"cases\":[]}}"
+      }
+    ],
+    "temperature": 0.0,
+    "max_tokens": 4096
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "### Company Profile: Teguh Cahaya Medical Sdn. Bhd.\n\n**Overview**\n* **Industry & Nature of Business:** Healthcare (Community pharmacy and dietary supplements)\n* **Status & History:** Active private limited company incorporated on April 9, 1991 (Over 30 years in operation). \n* **Location:** Kuala Lumpur, Malaysia\n* **Share Capital:** RM 5,000,000\n* **Ownership & Leadership:** Wholly owned (100%) by Managing Director (\"Director 1\"), alongside an Independent Director appointed in 2004.\n* **Litigation:** No recorded legal cases.\n\n---\n\n### Financial & Operational Summary (2022 – 2024)\n\n* **Audit Standing:** Clean bill of health—all financial years (2022–2024) received **Unqualified audit opinions** from Audit Firm 6.\n* **Revenue & Profitability Trend (Declining):** \n  * **Revenue** dropped from RM 40.02M (2022) to RM 33.05M (2023), and further to RM 26.19M in 2024.\n  * **Net Profit After Tax** contracted correspondingly from RM 3.63M (2022) to RM 1.49M (2023), and down to RM 517K in 2024, squeezing net profit margins from 9.1% down to ~2.0%. \n* **Liquidity & Solvency (Strengthening):**\n  * Despite shrinking revenues, the company has managed its balance sheet conservatively. **Total liabilities** were nearly halved from RM 13.67M (2022) to RM 7.31M (2024) through steady debt repayments.\n  * **Quick Ratio** improved to a healthy 1.65 (2024), and cash reserves grew to RM 2.82M, indicating strong short-term liquidity.\n* **Cash Flow:** Remained consistently positive in operating cash flow (RM 2.67M in 2024) and free cash flow generation.\n\n---\n\n### Verdict / Recommendation for Vetting Team\n\n* **Worth a Closer Look?** **Yes, but with caveats.** \n* **Strengths:** Excellent audit history, zero litigation, strong liquidity, clean balance sheet with low leverage, and long-standing market presence (30+ years). \n* **Risks:** Noticeable, continuous top-line and bottom-line contraction over the last three years (2022–2024). \n\n*Recommended next steps include investigating the root cause of the revenue decline (e.g., market shifts, loss of key accounts, or strategic downsizing) before entering into high-commitment partnerships.*",
+          "extra_content": {
+            "google": {
+              "thought_signature": "Eo4BCosBAWkUfRPMe5fTuRsuAf3ipMdybAa0ht2FzK83G51gCQapGR6AmXF2ujA/bBfEY1nnITFfn4iEuFJPz3k68lWBdOL9+S/WFvF+J+woETQri+IXyjtP3ZU5MHxSRwL08GrmFWmqrfdQ8WD4VfuhQhq20kXz1fEjSJGrECXWJxVruUOcBOUcEiHyNF5rFA=="
+            }
+          },
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1795392915,
+    "id": "j4UDa6WFGISM694Pv9CK-Ak",
+    "model": "gemini-3.5-flash-lite",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 623,
+      "prompt_tokens": 2189,
+      "total_tokens": 2812
+    }
+  }
+}

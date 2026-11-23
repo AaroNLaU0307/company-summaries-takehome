@@ -1,0 +1,48 @@
+{
+  "version": "v1",
+  "item_id": "SYN-000511",
+  "request_hash": "54ce4402da64266d",
+  "requested_at": "2026-11-23T08:11:46+0800",
+  "elapsed_s": 4.5,
+  "request": {
+    "model": "gemini-3.5-flash-lite",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful analyst."
+      },
+      {
+        "role": "user",
+        "content": "A team vets companies before picking them as suppliers or project partners. Write a short summary of this company for them to read first, so they can decide whether it is worth a closer look. Use Markdown.\n\nCompany record (JSON):\n{\"registrationNumber\":\"SYN-000511\",\"profile\":{\"companyName\":\"Sinar Everbright Trading Sdn. Bhd.\",\"status\":\"Active\",\"companyType\":\"Private limited company\",\"incorporationDate\":\"2007-12-29\",\"industry\":\"Retail\",\"state\":\"Kuala Lumpur\",\"natureOfBusiness\":\"Online retail of baby products and toys\",\"shareCapital\":100000,\"formerNames\":[]},\"relationships\":{\"directors\":[{\"name\":\"Director 1\",\"designation\":\"Managing Director\",\"appointedOn\":\"2015-01-07\"},{\"name\":\"Director 2\",\"designation\":\"Executive Director\",\"appointedOn\":\"2020-02-08\"},{\"name\":\"Director 3\",\"designation\":\"Director\",\"appointedOn\":\"2017-05-11\"},{\"name\":\"Director 4\",\"designation\":\"Director\",\"appointedOn\":\"2011-02-19\"},{\"name\":\"Director 5\",\"designation\":\"Independent Director\",\"appointedOn\":\"2023-04-25\"}],\"shareholders\":[{\"type\":\"individual\",\"name\":\"Director 3\",\"percentage\":72.7},{\"type\":\"individual\",\"name\":\"Director 2\",\"percentage\":16.81},{\"type\":\"individual\",\"name\":\"Director 1\",\"percentage\":10.35},{\"type\":\"individual\",\"name\":\"Director 4\",\"percentage\":0.14}]},\"financials\":{\"years\":[{\"financialYear\":2022,\"financialYearEnd\":\"2022-12-31\",\"audit\":{\"firm\":\"Audit Firm 1\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":1669234,\"costOfSales\":1158298,\"grossProfit\":510936,\"operatingExpenses\":430631,\"operatingProfit\":80305,\"depreciation\":38421,\"interestExpense\":20957,\"profitBeforeTax\":59348,\"taxExpense\":14244,\"profitAfterTax\":45104,\"cash\":95904,\"tradeReceivables\":148834,\"inventory\":158924,\"currentAssets\":508262,\"nonCurrentAssets\":1583748,\"totalAssets\":2092010,\"tradePayables\":271057,\"borrowings\":381031,\"currentLiabilities\":476744,\"totalLiabilities\":834843,\"totalEquity\":1257167,\"operatingCashFlow\":92496,\"capitalExpenditure\":112621,\"borrowingsRepaid\":70323},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.3061,\"operatingProfitMargin\":0.0481,\"ebitda\":118726,\"ebitdaMargin\":0.0711,\"operatingExpenseRatio\":0.258,\"netProfitMargin\":0.027,\"taxEfficiencyRatio\":0.76},\"liquidityAndCashFlow\":{\"quickRatio\":0.7328,\"cashRatio\":0.2012,\"cashToRevenueRatio\":0.0575,\"operatingCashFlow\":92496,\"operatingCashFlowMargin\":0.0554,\"freeCashFlow\":-20125,\"accrualRatio\":-0.0227},\"operationalEfficiency\":{\"cashConversionCycle\":-2.7906,\"daysSalesOutstanding\":32.5445,\"daysInventoryOutstanding\":50.0797,\"daysPayablesOutstanding\":85.4148,\"inventoryTurnover\":7.2884,\"receivablesTurnover\":11.2154,\"assetTurnoverRatio\":0.7979,\"netWorkingCapital\":31518},\"capitalStructure\":{\"leverageRatio\":0.6641,\"interestCoverageRatio\":3.8319,\"fixedAssetComposition\":0.757,\"depreciationToAssetRatio\":0.0184,\"debtServiceCoverageRatio\":1.3007}}},{\"financialYear\":2023,\"financialYearEnd\":\"2023-12-31\",\"audit\":{\"firm\":\"Audit Firm 1\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":1406878,\"costOfSales\":955174,\"grossProfit\":451704,\"operatingExpenses\":406183,\"operatingProfit\":45521,\"depreciation\":32382,\"interestExpense\":17663,\"profitBeforeTax\":27858,\"taxExpense\":6686,\"profitAfterTax\":21172,\"cash\":193147,\"tradeReceivables\":114944,\"inventory\":106980,\"currentAssets\":503231,\"nonCurrentAssets\":1317159,\"totalAssets\":1820390,\"tradePayables\":227259,\"borrowings\":321144,\"currentLiabilities\":323602,\"totalLiabilities\":548403,\"totalEquity\":1271987,\"operatingCashFlow\":91321,\"capitalExpenditure\":66641,\"borrowingsRepaid\":28124},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.3211,\"operatingProfitMargin\":0.0324,\"ebitda\":77903,\"ebitdaMargin\":0.0554,\"operatingExpenseRatio\":0.2887,\"netProfitMargin\":0.015,\"taxEfficiencyRatio\":0.76},\"liquidityAndCashFlow\":{\"quickRatio\":1.2245,\"cashRatio\":0.5969,\"cashToRevenueRatio\":0.1373,\"operatingCashFlow\":91321,\"operatingCashFlowMargin\":0.0649,\"freeCashFlow\":24680,\"accrualRatio\":-0.0385},\"operationalEfficiency\":{\"cashConversionCycle\":-16.1411,\"daysSalesOutstanding\":29.821,\"daysInventoryOutstanding\":40.8802,\"daysPayablesOutstanding\":86.8423,\"inventoryTurnover\":8.9285,\"receivablesTurnover\":12.2397,\"assetTurnoverRatio\":0.7728,\"netWorkingCapital\":179629},\"capitalStructure\":{\"leverageRatio\":0.4311,\"interestCoverageRatio\":2.5772,\"fixedAssetComposition\":0.7236,\"depreciationToAssetRatio\":0.0178,\"debtServiceCoverageRatio\":1.7014}}},{\"financialYear\":2024,\"financialYearEnd\":\"2024-12-31\",\"audit\":{\"firm\":\"Audit Firm 1\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":1115956,\"costOfSales\":728802,\"grossProfit\":387154,\"operatingExpenses\":368263,\"operatingProfit\":18891,\"depreciation\":25686,\"interestExpense\":14010,\"profitBeforeTax\":4881,\"taxExpense\":1171,\"profitAfterTax\":3710,\"cash\":167259,\"tradeReceivables\":95230,\"inventory\":98144,\"currentAssets\":430563,\"nonCurrentAssets\":1261223,\"totalAssets\":1691786,\"tradePayables\":162466,\"borrowings\":254736,\"currentLiabilities\":238887,\"totalLiabilities\":417202,\"totalEquity\":1274584,\"operatingCashFlow\":16385,\"capitalExpenditure\":50582,\"borrowingsRepaid\":29041},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.3469,\"operatingProfitMargin\":0.0169,\"ebitda\":44577,\"ebitdaMargin\":0.0399,\"operatingExpenseRatio\":0.33,\"netProfitMargin\":0.0033,\"taxEfficiencyRatio\":0.7601},\"liquidityAndCashFlow\":{\"quickRatio\":1.3915,\"cashRatio\":0.7002,\"cashToRevenueRatio\":0.1499,\"operatingCashFlow\":16385,\"operatingCashFlowMargin\":0.0147,\"freeCashFlow\":-34197,\"accrualRatio\":-0.0075},\"operationalEfficiency\":{\"cashConversionCycle\":-1.0666,\"daysSalesOutstanding\":31.1472,\"daysInventoryOutstanding\":49.1527,\"daysPayablesOutstanding\":81.3665,\"inventoryTurnover\":7.4258,\"receivablesTurnover\":11.7185,\"assetTurnoverRatio\":0.6596,\"netWorkingCapital\":191676},\"capitalStructure\":{\"leverageRatio\":0.3273,\"interestCoverageRatio\":1.3484,\"fixedAssetComposition\":0.7455,\"depreciationToAssetRatio\":0.0152,\"debtServiceCoverageRatio\":1.0354}}}]},\"litigation\":{\"cases\":[]}}"
+      }
+    ],
+    "temperature": 0.0,
+    "max_tokens": 4096
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "### Executive Summary: Sinar Everbright Trading Sdn. Bhd.\n\n* **Registration No:** SYN-000511\n* **Status & Type:** Active | Private Limited Company (Incorporated Dec 2007)\n* **Industry/Location:** Retail (Online retail of baby products and toys) | Kuala Lumpur\n* **Ownership Concentration:** Director 3 holds a controlling stake (72.7%), followed by Director 2 (16.81%) and Director 1 (10.35%).\n* **Audit Standing:** Clean (Unqualified opinions across FY2022–FY2024 by Audit Firm 1). No recorded litigation.\n\n---\n\n### Financial & Operational Health (FY2022 – FY2024)\n\n| Metric | FY2022 | FY2023 | FY2024 | Trend / Observation |\n| :--- | :--- | :--- | :--- | :--- |\n| **Revenue** | 1,669,234 | 1,406,878 | 1,115,956 | 📉 Consistent top-line contraction |\n| **Gross Profit Margin** | 30.6% | 32.1% | 34.7% | 📈 Improving pricing power / margins |\n| **Net Profit After Tax** | 45,104 | 21,172 | 3,710 | 📉 Declining profitability |\n| **Operating Cash Flow** | 92,496 | 91,321 | 16,385 | ⚠️ Sharp drop in cash generation for FY2024 |\n| **Quick Ratio** | 0.73 | 1.22 | 1.39 | 📈 Strengthened short-term liquidity |\n| **Leverage Ratio** | 0.66 | 0.43 | 0.33 | 📉 Actively reducing debt/liabilities |\n\n---\n\n### Verdict for Vetting Team\n\n* **Worth a closer look?** **Conditional / Medium Priority.**\n* **Strengths:** Clean audit history, zero litigation, improving gross margins, and a strengthening balance sheet with lower debt and better quick ratios.\n* **Risks:** The company is experiencing a sustained multi-year decline in revenue and net profit, with net income nearly flattening out by FY2024. Operating cash flow also dropped significantly in the most recent financial year. \n\n**Recommendation:** Proceed to a closer operational check only if their product niche and pricing are critical; however, request up-to-date management accounts to verify if the downward revenue trend has stabilized.",
+          "extra_content": {
+            "google": {
+              "thought_signature": "Eo4BCosBAWkUfRPlp54HoHXdE17yjg4Ew3ydofDImFCB3RDphvYGOKONrjakM2UuPYVInwgWSQ3ty4FLPC4dPHQ6Av4Zw4L3Wg4KDEsR3glV8OlFmeiLEqzhYYWih6+PW/URf674WJMbuy4i4DInkfZa4noY5BYAOnxX6JRxxLwVQymtd7Rvq5XEo7erTtO2LA=="
+            }
+          },
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1795392706,
+    "id": "vYQDa9_9OqKN694Po9OYqAk",
+    "model": "gemini-3.5-flash-lite",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 589,
+      "prompt_tokens": 2191,
+      "total_tokens": 2780
+    }
+  }
+}

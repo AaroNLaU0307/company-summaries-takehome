@@ -1,0 +1,31 @@
+version,registrationNumber,number,matched_field,context,agent_judgement,notes
+v1,SYN-000546,116.73M,financials.years[2].statements.totalEquity,Total equity stands at 116.73M MYR against total borrowings of 52.97M MYR in FY2024.,correct,value and field agree with the text
+v1,SYN-000657,MYR 55.61M,financials.years[0].statements.totalAssets,Balance Sheet & Leverage: Total assets have contracted from MYR 55.61M to MYR 49.53M.,correct,value and field agree with the text
+v1,SYN-001253,2.48M,financials.years[1].statements.costOfSales,83M / 2.48M Growing asset base and retained equity,correct,"matched costOfSales, but the text means equity FY2024 = 2,481,753, also 2.48M: value right"
+v1,SYN-000217,54.11%,financials.years[2].ratiosAndMetrics.profitability.grossProfitMargin x100,"Margins (2024): Gross profit margin stands strong at 54.11% , with a net profit margin of 6.89% .",correct,value and field agree with the text
+v1,SYN-000451,"RM519,800",litigation.cases[1].claimAmount,"2021 Case (Plaintiff): Acted as a plaintiff for a RM519,800 debt recovery claim, which was successfully settled .",correct,value and field agree with the text
+v1,SYN-001645,MYR 12.43M,financials.years[2].statements.totalEquity,"07M) are well-balanced against total equity (MYR 12.43M) and total assets (MYR 21.51M) in FY2024, reflecting a healthy leverage ratio (0.73).",correct,value and field agree with the text
+v1,SYN-000657,MYR 34.22M,financials.years[1].statements.revenue,"02M (2022) to MYR 34.22M (2023), and further down to MYR 32.08M (2024).",correct,value and field agree with the text
+v1,SYN-001529,-RM58.7k,financials.years[0].statements.operatingCashFlow,"Operating cash flow improved dramatically from a negative position (-RM58.7k in FY2022) to RM1.89M in FY2024 , supported by a healthy free cash flow of RM1.28M.",correct,value and field agree with the text
+v1,SYN-001102,RM2.6M,financials.years[0].statements.profitAfterTax,"Net Profit After Tax: Scaled from RM2.6M (2022) to RM3.4M (2023), and reached RM6.8M in 2024.",correct,value and field agree with the text
+v1,SYN-001085,0.94,financials.years[2].ratiosAndMetrics.capitalStructure.leverageRatio,52M in FY2024 (Leverage ratio: 0.94).,correct,value and field agree with the text
+v1,SYN-001569,1.04,financials.years[2].ratiosAndMetrics.liquidityAndCashFlow.quickRatio,"0 (FY2024 quick ratio: 1.04), indicating short-term obligations are covered.",correct,value and field agree with the text
+v1,SYN-001253,60.0%,financials.years[0].ratiosAndMetrics.profitability.grossProfitMargin x100,"Gross Profit Margin ~60.0% ~62.0% Strong, stable pricing power",correct,value and field agree with the text
+v1,SYN-001472,MYR 578k,financials.years[2].statements.profitAfterTax,"Net profit improved year-on-year, rising from MYR 225k (2022) to MYR 363k (2023), and closing at MYR 578k in 2024.",correct,value and field agree with the text
+v1,SYN-000397,1.98%,relationships.shareholders[3].percentage,"89%, Director 3: 1.98%).",correct,value and field agree with the text
+v1,SYN-001472,0.77,financials.years[2].ratiosAndMetrics.liquidityAndCashFlow.quickRatio,"75 – 0.77 , and the company maintains negative net working capital (though narrowing to -MYR 20.6k in 2024), pointing to reliance on ongoing operational cash flows to manage short-term obligations.",correct,value and field agree with the text
+v2,SYN-000267,RM 473.2k,financials.years[2].statements.profitAfterTax,"37m, RM 473.2k, RM 12.32m, 1.49; revenue change 7.3% FY2023 to FY2024.",correct,value and field agree with the text
+v2,SYN-001529,RM 16.15m,financials.years[2].statements.revenue,"Financials: FY2024: RM 16.15m revenue, RM 745.2k profit after tax, RM 3.63m equity, 1.03 quick ratio, revenue change 20.2% FY2023 to FY2024.",correct,value and field agree with the text
+v2,SYN-001472,RM 3.30m,financials.years[2].statements.totalEquity,"3k, equity RM 3.30m, quick ratio 0.77; revenue change 38.5% FY2023 to FY2024.",correct,value and field agree with the text
+v2,SYN-000785,RM 13.38m,financials.years[2].statements.revenue,"98m to RM 13.38m, FY2023 to FY2024.",correct,value and field agree with the text
+v2,SYN-000511,1.35x,financials.years[2].ratiosAndMetrics.capitalStructure.interestCoverageRatio,Debt service strain in FY2024: interest coverage 1.35x.,correct,value and field agree with the text
+v2,SYN-001529,7.17%,relationships.shareholders[2].percentage,"16%), and Director 4 (7.17%).",correct,value and field agree with the text
+v2,SYN-001199,RM 12.29m,financials.years[2].statements.revenue,"Financials: FY2024: RM 12.29m, RM 491.4k, RM 2.27m, 1.73; 20.6% increase from FY2023.",correct,value and field agree with the text
+v2,SYN-001618,RM 3.81m,financials.years[2].statements.totalEquity,"26m, equity RM 3.81m, quick ratio 0.86, revenue change -9.5% from FY2023 to FY2024.",correct,value and field agree with the text
+v2,SYN-000783,100%,relationships.shareholders[0].percentage,Main shareholder is Director 1 holding 100%.,correct,value and field agree with the text
+v2,SYN-001569,0.73x,financials.years[2].ratiosAndMetrics.capitalStructure.debtServiceCoverageRatio,Debt service strain in FY2024: debt service coverage ratio of 0.73x.,correct,value and field agree with the text
+v2,SYN-000451,1.0,threshold.quick_ratio,81x (below 1.0).,correct,value and field agree with the text
+v2,SYN-000657,-RM 4.47m,financials.years[2].statements.profitBeforeTax,"08m revenue, -RM 4.47m profit after tax, RM 20.05m equity, 0.91 quick ratio, -6.2% revenue change from FY2023.",correct,"matched profitBeforeTax; profit after tax is the same value (-4,470,415): right"
+v2,SYN-000451,-RM 275.6k,financials.years[2].statements.profitBeforeTax,"08m, profit after tax -RM 275.6k, equity -RM 18.5k, quick ratio 0.63; revenue change -7.4% FY2023 to FY2024.",correct,"matched profitBeforeTax; profit after tax -275,562 also rounds to 275.6k: right"
+v2,SYN-001389,10.46%,relationships.shareholders[1].percentage,"78%, Director 5 at 10.46%, and Director 1 at 1.76%.",correct,value and field agree with the text
+v2,SYN-001455,RM 4.26m,financials.years[2].statements.totalEquity,"0k, equity RM 4.26m, quick ratio 1.14, revenue change 6.3% FY2023 to FY2024.",correct,value and field agree with the text

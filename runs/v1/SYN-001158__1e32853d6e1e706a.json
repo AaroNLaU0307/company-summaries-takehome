@@ -1,0 +1,48 @@
+{
+  "version": "v1",
+  "item_id": "SYN-001158",
+  "request_hash": "1e32853d6e1e706a",
+  "requested_at": "2026-11-23T08:14:10+0800",
+  "elapsed_s": 4.81,
+  "request": {
+    "model": "gemini-3.5-flash-lite",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful analyst."
+      },
+      {
+        "role": "user",
+        "content": "A team vets companies before picking them as suppliers or project partners. Write a short summary of this company for them to read first, so they can decide whether it is worth a closer look. Use Markdown.\n\nCompany record (JSON):\n{\"registrationNumber\":\"SYN-001158\",\"profile\":{\"companyName\":\"Bestari Kirana Ladang Sdn. Bhd.\",\"status\":\"Active\",\"companyType\":\"Private limited company\",\"incorporationDate\":\"2023-08-11\",\"industry\":\"Agriculture\",\"state\":\"Selangor\",\"natureOfBusiness\":\"Oil palm plantation and fresh fruit bunch supply\",\"shareCapital\":2500000,\"formerNames\":[]},\"relationships\":{\"directors\":[{\"name\":\"Director 1\",\"designation\":\"Managing Director\",\"appointedOn\":\"2024-12-02\"},{\"name\":\"Director 2\",\"designation\":\"Executive Director\",\"appointedOn\":\"2025-04-06\"},{\"name\":\"Director 3\",\"designation\":\"Director\",\"appointedOn\":\"2024-08-07\"},{\"name\":\"Director 4\",\"designation\":\"Independent Director\",\"appointedOn\":\"2025-03-08\"}],\"shareholders\":[{\"type\":\"individual\",\"name\":\"Director 3\",\"percentage\":34.7},{\"type\":\"individual\",\"name\":\"Director 1\",\"percentage\":52.86},{\"type\":\"individual\",\"name\":\"Director 2\",\"percentage\":12.44}]},\"financials\":{\"years\":[{\"financialYear\":2024,\"financialYearEnd\":\"2024-06-30\",\"audit\":{\"firm\":\"Audit Firm 4\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":62464139,\"costOfSales\":48355082,\"grossProfit\":14109057,\"operatingExpenses\":16739363,\"operatingProfit\":-2630306,\"depreciation\":3097576,\"interestExpense\":1498091,\"profitBeforeTax\":-4128397,\"taxExpense\":0,\"profitAfterTax\":-4128397,\"cash\":4211620,\"tradeReceivables\":17062334,\"inventory\":11452345,\"currentAssets\":37194097,\"nonCurrentAssets\":52161866,\"totalAssets\":89355963,\"tradePayables\":8611757,\"borrowings\":27238012,\"currentLiabilities\":20561967,\"totalLiabilities\":43407382,\"totalEquity\":45948581,\"operatingCashFlow\":-1055947,\"capitalExpenditure\":2249602,\"borrowingsRepaid\":2675831},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.2259,\"operatingProfitMargin\":-0.0421,\"ebitda\":467270,\"ebitdaMargin\":0.0075,\"operatingExpenseRatio\":0.268,\"netProfitMargin\":-0.0661,\"taxEfficiencyRatio\":null},\"liquidityAndCashFlow\":{\"quickRatio\":1.2519,\"cashRatio\":0.2048,\"cashToRevenueRatio\":0.0674,\"operatingCashFlow\":-1055947,\"operatingCashFlowMargin\":-0.0169,\"freeCashFlow\":-3305549,\"accrualRatio\":-0.0344},\"operationalEfficiency\":{\"cashConversionCycle\":121.1429,\"daysSalesOutstanding\":99.7012,\"daysInventoryOutstanding\":86.4461,\"daysPayablesOutstanding\":65.0044,\"inventoryTurnover\":4.2223,\"receivablesTurnover\":3.6609,\"assetTurnoverRatio\":0.699,\"netWorkingCapital\":16632130},\"capitalStructure\":{\"leverageRatio\":0.9447,\"interestCoverageRatio\":-1.7558,\"fixedAssetComposition\":0.5838,\"depreciationToAssetRatio\":0.0347,\"debtServiceCoverageRatio\":0.1119}}}]},\"litigation\":{\"cases\":[]}}"
+      }
+    ],
+    "temperature": 0.0,
+    "max_tokens": 4096
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "### Executive Summary: Bestari Kirana Ladang Sdn. Bhd.\n\n**Registration Number:** SYN-001158  \n**Status:** Active | **Incorporation Date:** 2023-08-11  \n**Industry:** Agriculture (Selangor, Malaysia)  \n**Nature of Business:** Oil palm plantation and fresh fruit bunch (FFB) supply  \n**Share Capital:** 2,500,000 MYR  \n\n---\n\n#### 1. Business Profile & Ownership\n* **Scale & Operations:** A relatively young private limited company (incorporated August 2023) operating in the agricultural sector with total assets of ~89.4M MYR and non-current assets of ~52.2M MYR, indicating substantial plantation infrastructure.\n* **Leadership & Shareholding:** Closely held by three individual shareholders who also serve as directors:\n  * **Director 1:** Managing Director & Majority Shareholder (52.86%)\n  * **Director 3:** Director & Shareholder (34.70%)\n  * **Director 2:** Executive Director & Shareholder (12.44%)\n* **Governance:** Board includes an Independent Director appointed in March 2025.\n* **Litigation:** No recorded legal cases.\n\n#### 2. Financial Health (FYE June 30, 2024)\n* **Audit:** Received an **Unqualified opinion** from Audit Firm 4, indicating clean financial statements.\n* **Revenue & Profitability:** Generated **62.46M MYR** in revenue with a healthy gross profit margin of **22.59%** (14.11M MYR gross profit). However, due to high operating expenses (16.74M MYR) and financing costs (1.50M MYR interest expense), the company recorded an operating loss of **2.63M MYR** and a net loss after tax of **4.13M MYR** (Net Profit Margin: -6.61%).\n* **Cash Flow:** Negative operating cash flow (-1.06M MYR) and free cash flow (-3.31M MYR) for the initial financial year. \n* **Liquidity:** Sound short-term liquidity position with a quick ratio of **1.25** and current assets of 37.19M MYR against current liabilities of 20.56M MYR. \n* **Leverage:** Total borrowings stand at **27.24M MYR** within total liabilities of 43.41M MYR, resulting in a leverage ratio of **0.94**. Interest coverage is currently weak (-1.76) due to the operating loss.\n\n---\n\n#### 3. Verdict & Recommendation for Vetting Team\n\n* **Worth a closer look?** **Yes, conditionally.** \n* **Key Strengths:** Strong top-line revenue generation for a first-year operating cycle, solid asset backing (plantation land/infrastructure), clean audit opinion, and healthy short-term liquidity.\n* **Key Risks:** First-year net losses, negative operating cash flows, and high debt servicing pressure relative to current operational earnings.\n\n**Suggested Next Steps:** Request management accounts for the post-2024 period to assess if operational efficiencies and cost-control measures have improved profitability since the initial setup phase.",
+          "extra_content": {
+            "google": {
+              "thought_signature": "Eo4BCosBAWkUfRMgb5uH+2YU7q/12DTxC7WeR36lg3UL/xuj5ZpBAOxyY/AfWVgP1cEORkUW3ys4y/yoVM4pqCk25OlmQrWC/jghDhCGNbUqPB0r+FZyiP/NsmJZm5pOBwI/Nn21XIZq0AO2Sq8XUEGcbNk6GYvI1hzYaznjZOkckZvi8nERbuRaybBJ7U7FKg=="
+            }
+          },
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1795392850,
+    "id": "ToUDa4LBDpD7juMP57_niQ4",
+    "model": "gemini-3.5-flash-lite",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 735,
+      "prompt_tokens": 986,
+      "total_tokens": 1721
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "version": "v1",
+  "item_id": "SYN-001253",
+  "request_hash": "958867c7ca1e1edd",
+  "requested_at": "2026-11-23T08:14:51+0800",
+  "elapsed_s": 6.61,
+  "request": {
+    "model": "gemini-3.5-flash-lite",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful analyst."
+      },
+      {
+        "role": "user",
+        "content": "A team vets companies before picking them as suppliers or project partners. Write a short summary of this company for them to read first, so they can decide whether it is worth a closer look. Use Markdown.\n\nCompany record (JSON):\n{\"registrationNumber\":\"SYN-001253\",\"profile\":{\"companyName\":\"Everbright Teguh Hotel Sdn. Bhd.\",\"status\":\"Active\",\"companyType\":\"Private limited company\",\"incorporationDate\":\"1989-07-29\",\"industry\":\"Hospitality\",\"state\":\"Selangor\",\"natureOfBusiness\":\"Boutique hotel in Kuantan\",\"shareCapital\":500000,\"formerNames\":[]},\"relationships\":{\"directors\":[{\"name\":\"Director 1\",\"designation\":\"Managing Director\",\"appointedOn\":\"2018-06-19\"},{\"name\":\"Director 2\",\"designation\":\"Director\",\"appointedOn\":\"2025-08-08\"},{\"name\":\"Director 3\",\"designation\":\"Director\",\"appointedOn\":\"2018-10-31\"},{\"name\":\"Director 4\",\"designation\":\"Executive Director\",\"appointedOn\":\"1999-09-24\"},{\"name\":\"Director 5\",\"designation\":\"Independent Director\",\"appointedOn\":\"1993-11-13\"}],\"shareholders\":[{\"type\":\"individual\",\"name\":\"Director 4\",\"percentage\":90.66},{\"type\":\"individual\",\"name\":\"Director 1\",\"percentage\":9.34}]},\"financials\":{\"years\":[{\"financialYear\":2022,\"financialYearEnd\":\"2022-12-31\",\"audit\":{\"firm\":\"Audit Firm 1\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":6227194,\"costOfSales\":2493133,\"grossProfit\":3734061,\"operatingExpenses\":3256399,\"operatingProfit\":477662,\"depreciation\":361118,\"interestExpense\":128831,\"profitBeforeTax\":348831,\"taxExpense\":83719,\"profitAfterTax\":265112,\"cash\":475988,\"tradeReceivables\":1291210,\"inventory\":227714,\"currentAssets\":2273237,\"nonCurrentAssets\":3293259,\"totalAssets\":5566496,\"tradePayables\":430815,\"borrowings\":2342382,\"currentLiabilities\":1498719,\"totalLiabilities\":3503575,\"totalEquity\":2062921,\"operatingCashFlow\":777047,\"capitalExpenditure\":361451,\"borrowingsRepaid\":196003},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.5996,\"operatingProfitMargin\":0.0767,\"ebitda\":838780,\"ebitdaMargin\":0.1347,\"operatingExpenseRatio\":0.5229,\"netProfitMargin\":0.0426,\"taxEfficiencyRatio\":0.76},\"liquidityAndCashFlow\":{\"quickRatio\":1.3648,\"cashRatio\":0.3176,\"cashToRevenueRatio\":0.0764,\"operatingCashFlow\":777047,\"operatingCashFlowMargin\":0.1248,\"freeCashFlow\":415596,\"accrualRatio\":-0.092},\"operationalEfficiency\":{\"cashConversionCycle\":45.9484,\"daysSalesOutstanding\":75.6828,\"daysInventoryOutstanding\":33.3378,\"daysPayablesOutstanding\":63.0722,\"inventoryTurnover\":10.9485,\"receivablesTurnover\":4.8228,\"assetTurnoverRatio\":1.1187,\"netWorkingCapital\":774518},\"capitalStructure\":{\"leverageRatio\":1.6984,\"interestCoverageRatio\":3.7077,\"fixedAssetComposition\":0.5916,\"depreciationToAssetRatio\":0.0649,\"debtServiceCoverageRatio\":2.5822}}},{\"financialYear\":2024,\"financialYearEnd\":\"2024-12-31\",\"audit\":{\"firm\":\"Audit Firm 1\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":6520818,\"costOfSales\":2478301,\"grossProfit\":4042517,\"operatingExpenses\":3553978,\"operatingProfit\":488539,\"depreciation\":378145,\"interestExpense\":134906,\"profitBeforeTax\":353633,\"taxExpense\":84872,\"profitAfterTax\":268761,\"cash\":472151,\"tradeReceivables\":1646756,\"inventory\":273675,\"currentAssets\":2684030,\"nonCurrentAssets\":3144937,\"totalAssets\":5828967,\"tradePayables\":437806,\"borrowings\":2452830,\"currentLiabilities\":1401944,\"totalLiabilities\":3347214,\"totalEquity\":2481753,\"operatingCashFlow\":602464,\"capitalExpenditure\":319109,\"borrowingsRepaid\":197780},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.6199,\"operatingProfitMargin\":0.0749,\"ebitda\":866684,\"ebitdaMargin\":0.1329,\"operatingExpenseRatio\":0.545,\"netProfitMargin\":0.0412,\"taxEfficiencyRatio\":0.76},\"liquidityAndCashFlow\":{\"quickRatio\":1.7193,\"cashRatio\":0.3368,\"cashToRevenueRatio\":0.0724,\"operatingCashFlow\":602464,\"operatingCashFlowMargin\":0.0924,\"freeCashFlow\":283355,\"accrualRatio\":-0.0572},\"operationalEfficiency\":{\"cashConversionCycle\":68.0036,\"daysSalesOutstanding\":92.1765,\"daysInventoryOutstanding\":40.3064,\"daysPayablesOutstanding\":64.4793,\"inventoryTurnover\":9.0556,\"receivablesTurnover\":3.9598,\"assetTurnoverRatio\":1.1187,\"netWorkingCapital\":1282086},\"capitalStructure\":{\"leverageRatio\":1.3487,\"interestCoverageRatio\":3.6213,\"fixedAssetComposition\":0.5395,\"depreciationToAssetRatio\":0.0649,\"debtServiceCoverageRatio\":2.6051}}}]},\"litigation\":{\"cases\":[]}}"
+      }
+    ],
+    "temperature": 0.0,
+    "max_tokens": 4096
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "### Supplier Brief: Everbright Teguh Hotel Sdn. Bhd.\n\n**Registration Number:** SYN-001253  \n**Status & Type:** Active | Private Limited Company (Incorporated July 1989)  \n**Industry / Nature of Business:** Hospitality | Boutique hotel in Kuantan, Selangor  \n**Share Capital:** 500,000 MYR  \n**Litigation Check:** No recorded litigation cases.\n\n---\n\n#### 🏢 Corporate Governance & Ownership\n* **Board Composition:** 5 directors, featuring a mix of long-standing leadership (since 1999/1993) and recent appointments (including a new director added in August 2025).\n* **Concentrated Shareholding:** \n  * *Director 4* (Executive Director): 90.66%\n  * *Director 1* (Managing Director): 9.34%\n\n---\n\n#### 📊 Financial Health & Performance (FY2022 vs. FY2024)\n*Audits for both years were completed by Audit Firm 1 with **Unqualified (clean) opinions**.*\n\n| Metric (MYR) | FY2022 | FY2024 | Trend / Notes |\n| :--- | :--- | :--- | :--- |\n| **Revenue** | 6.23M | 6.52M | Moderate top-line growth (~4.7%) |\n| **Gross Profit Margin** | ~60.0% | ~62.0% | Strong, stable pricing power |\n| **Operating Profit (EBIT)**| 477.7K | 488.5K | Stable operational returns |\n| **Net Profit (PAT)** | 265.1K | 268.8K | Consistent bottom-line generation |\n| **Operating Cash Flow** | 777.0K | 602.5K | Positive and healthy cash generation |\n| **Total Assets / Equity** | 5.57M / 2.06M | 5.83M / 2.48M | Growing asset base and retained equity |\n| **Total Borrowings** | 2.34M | 2.45M | Manageable debt load |\n\n---\n\n#### 🔍 Key Financial Ratios (FY2024)\n* **Liquidity:** Quick ratio of **1.72** indicates healthy short-term liquidity to cover current liabilities.\n* **Solvency & Coverage:** Interest coverage ratio of **3.62** and a debt service coverage ratio of **2.61** demonstrate comfortable debt-servicing capabilities.\n* **Efficiency:** Days Sales Outstanding (DSO) increased from 75.7 days to 92.2 days, pushing the Cash Conversion Cycle out to **68 days**, which warrants a brief check on their receivables collection cycle.\n\n---\n\n### **Analyst Recommendation**\n**Worth a Closer Look:** Yes. \nEverbright Teguh Hotel is an established, operationally stable boutique hospitality business with clean audit records, zero litigation, consistent profitability, and healthy liquidity. The high ownership concentration by executive management aligns well with long-term stability, though standard operational credit terms should account for their ~90-day accounts receivable cycle.",
+          "extra_content": {
+            "google": {
+              "thought_signature": "Eo4BCosBAWkUfRPDps6N7X3iettx8QFlnRHRzOhrlTLKGZvhkuS9WAHBVLH3FEXFsDFxPdx86y5VEyVeUPuG5n1dLRXXMJBuYcp7KDrPZaRY6DZDysH0lQ9A7vGC2VVJGiBi4IOveZi3V1MC+IIPGb61lYcPtWqBmqyAVN5ggCcozF+w2siEmluy9hlZymy3ug=="
+            }
+          },
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1795392891,
+    "id": "dYUDa4PsDdGJ3LUP-ZfP6QM",
+    "model": "gemini-3.5-flash-lite",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 723,
+      "prompt_tokens": 1591,
+      "total_tokens": 2314
+    }
+  }
+}

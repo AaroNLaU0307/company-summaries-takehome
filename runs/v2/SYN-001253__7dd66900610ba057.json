@@ -1,0 +1,48 @@
+{
+  "version": "v2",
+  "item_id": "SYN-001253",
+  "request_hash": "7dd66900610ba057",
+  "requested_at": "2026-11-23T08:14:53+0800",
+  "elapsed_s": 1.75,
+  "request": {
+    "model": "gemini-3.5-flash-lite",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You write triage notes for a supplier-vetting team. The reader has 30 seconds to decide whether a company is worth a closer look. Risk signals come first. Accuracy matters more than style: one invented number makes every note useless.\n\nRules:\n1. Use only facts from the FACTS SHEET and the RECORD. Never invent numbers, causes, plans or outside context.\n2. Copy amounts and ratios as they are written in the FACTS SHEET (for example \"RM 5.35m\", \"0.63\"). Do not do new arithmetic.\n3. The Verdict line starts with the computed triage level exactly as given (High concern, Review or Low concern).\n4. Every [high] and [medium] red flag in the FACTS SHEET must appear under Key risks, most serious first, each with its key number (count, amount, ratio or year). Give each flag its own bullet. For litigation give counts and totals, not case numbers. Say which financial year a non-clean audit opinion was for.\n5. If there are no [high] or [medium] flags, write \"- None found in the record.\" under Key risks.\n6. If data is missing, say so in Data gaps. Never describe a trend that the data cannot show. There are no FY2025 figures.\n7. Mention recent director appointments, a recent name change or a corporate parent under People and ownership.\n8. Total length 80 to 150 words. Plain words, short sentences. No advice beyond the triage call. Do not use the em dash character; use commas, colons or full stops.\n\nWrite exactly this Markdown structure and nothing else:\n\n**Verdict:** <triage level>: <main reason in one sentence>.\n\n**Key risks:**\n- <flag with key number>\n\n**Financials:** <latest year: revenue, profit after tax, equity, quick ratio; revenue change where there are two years, or \"no financial statements filed\">\n\n**People and ownership:** <directors, recent appointments, main shareholders, corporate parent>\n\n**Data gaps:** <what is missing, or \"None\">"
+      },
+      {
+        "role": "user",
+        "content": "FACTS SHEET (computed by code from the record) for Everbright Teguh Hotel Sdn. Bhd. (SYN-001253)\nComputed triage level: Low concern\nRed flags, most serious first:\n- None found by the rules.\nContext (low severity):\n- Missing financial year(s): FY2023.\n- 1 of 5 director(s) appointed in the last 12 months: Director 2 (Director, 2025-08-08).\nKey numbers:\n- status: Active\n- industry: Hospitality\n- state: Selangor\n- incorporated: 1989-07-29\n- share_capital: RM 500.0k\n- litigation: No court cases on record\n- financial_years: FY2022, FY2024\n- latest_year: FY2024 (year end 2024-12-31)\n- latest_revenue: RM 6.52m\n- latest_profit_after_tax: RM 268.8k\n- latest_total_equity: RM 2.48m\n- latest_operating_cash_flow: RM 602.5k\n- latest_borrowings: RM 2.45m\n- latest_quick_ratio: 1.72\n- latest_interest_coverage: 3.62\n- latest_debt_service_coverage: 2.61\n- latest_liabilities_to_equity: 1.35\n- latest_net_profit_margin: 4.1%\n- audit_opinions: FY2022 Unqualified; FY2024 Unqualified\n- revenue_change: 4.7% FY2022 to FY2024 (two-year change, FY in between missing)\n- previous_profit_after_tax: RM 265.1k (FY2022)\n- directors: 5 director(s)\n- shareholders: Director 4 90.66%; Director 1 9.34%\nData gaps: Missing FY2023 statements.\n\nRECORD (JSON):\n{\"registrationNumber\":\"SYN-001253\",\"profile\":{\"companyName\":\"Everbright Teguh Hotel Sdn. Bhd.\",\"status\":\"Active\",\"companyType\":\"Private limited company\",\"incorporationDate\":\"1989-07-29\",\"industry\":\"Hospitality\",\"state\":\"Selangor\",\"natureOfBusiness\":\"Boutique hotel in Kuantan\",\"shareCapital\":500000,\"formerNames\":[]},\"relationships\":{\"directors\":[{\"name\":\"Director 1\",\"designation\":\"Managing Director\",\"appointedOn\":\"2018-06-19\"},{\"name\":\"Director 2\",\"designation\":\"Director\",\"appointedOn\":\"2025-08-08\"},{\"name\":\"Director 3\",\"designation\":\"Director\",\"appointedOn\":\"2018-10-31\"},{\"name\":\"Director 4\",\"designation\":\"Executive Director\",\"appointedOn\":\"1999-09-24\"},{\"name\":\"Director 5\",\"designation\":\"Independent Director\",\"appointedOn\":\"1993-11-13\"}],\"shareholders\":[{\"type\":\"individual\",\"name\":\"Director 4\",\"percentage\":90.66},{\"type\":\"individual\",\"name\":\"Director 1\",\"percentage\":9.34}]},\"financials\":{\"years\":[{\"financialYear\":2022,\"financialYearEnd\":\"2022-12-31\",\"audit\":{\"firm\":\"Audit Firm 1\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":6227194,\"costOfSales\":2493133,\"grossProfit\":3734061,\"operatingExpenses\":3256399,\"operatingProfit\":477662,\"depreciation\":361118,\"interestExpense\":128831,\"profitBeforeTax\":348831,\"taxExpense\":83719,\"profitAfterTax\":265112,\"cash\":475988,\"tradeReceivables\":1291210,\"inventory\":227714,\"currentAssets\":2273237,\"nonCurrentAssets\":3293259,\"totalAssets\":5566496,\"tradePayables\":430815,\"borrowings\":2342382,\"currentLiabilities\":1498719,\"totalLiabilities\":3503575,\"totalEquity\":2062921,\"operatingCashFlow\":777047,\"capitalExpenditure\":361451,\"borrowingsRepaid\":196003},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.5996,\"operatingProfitMargin\":0.0767,\"ebitda\":838780,\"ebitdaMargin\":0.1347,\"operatingExpenseRatio\":0.5229,\"netProfitMargin\":0.0426,\"taxEfficiencyRatio\":0.76},\"liquidityAndCashFlow\":{\"quickRatio\":1.3648,\"cashRatio\":0.3176,\"cashToRevenueRatio\":0.0764,\"operatingCashFlow\":777047,\"operatingCashFlowMargin\":0.1248,\"freeCashFlow\":415596,\"accrualRatio\":-0.092},\"operationalEfficiency\":{\"cashConversionCycle\":45.9484,\"daysSalesOutstanding\":75.6828,\"daysInventoryOutstanding\":33.3378,\"daysPayablesOutstanding\":63.0722,\"inventoryTurnover\":10.9485,\"receivablesTurnover\":4.8228,\"assetTurnoverRatio\":1.1187,\"netWorkingCapital\":774518},\"capitalStructure\":{\"leverageRatio\":1.6984,\"interestCoverageRatio\":3.7077,\"fixedAssetComposition\":0.5916,\"depreciationToAssetRatio\":0.0649,\"debtServiceCoverageRatio\":2.5822}}},{\"financialYear\":2024,\"financialYearEnd\":\"2024-12-31\",\"audit\":{\"firm\":\"Audit Firm 1\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":6520818,\"costOfSales\":2478301,\"grossProfit\":4042517,\"operatingExpenses\":3553978,\"operatingProfit\":488539,\"depreciation\":378145,\"interestExpense\":134906,\"profitBeforeTax\":353633,\"taxExpense\":84872,\"profitAfterTax\":268761,\"cash\":472151,\"tradeReceivables\":1646756,\"inventory\":273675,\"currentAssets\":2684030,\"nonCurrentAssets\":3144937,\"totalAssets\":5828967,\"tradePayables\":437806,\"borrowings\":2452830,\"currentLiabilities\":1401944,\"totalLiabilities\":3347214,\"totalEquity\":2481753,\"operatingCashFlow\":602464,\"capitalExpenditure\":319109,\"borrowingsRepaid\":197780},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.6199,\"operatingProfitMargin\":0.0749,\"ebitda\":866684,\"ebitdaMargin\":0.1329,\"operatingExpenseRatio\":0.545,\"netProfitMargin\":0.0412,\"taxEfficiencyRatio\":0.76},\"liquidityAndCashFlow\":{\"quickRatio\":1.7193,\"cashRatio\":0.3368,\"cashToRevenueRatio\":0.0724,\"operatingCashFlow\":602464,\"operatingCashFlowMargin\":0.0924,\"freeCashFlow\":283355,\"accrualRatio\":-0.0572},\"operationalEfficiency\":{\"cashConversionCycle\":68.0036,\"daysSalesOutstanding\":92.1765,\"daysInventoryOutstanding\":40.3064,\"daysPayablesOutstanding\":64.4793,\"inventoryTurnover\":9.0556,\"receivablesTurnover\":3.9598,\"assetTurnoverRatio\":1.1187,\"netWorkingCapital\":1282086},\"capitalStructure\":{\"leverageRatio\":1.3487,\"interestCoverageRatio\":3.6213,\"fixedAssetComposition\":0.5395,\"depreciationToAssetRatio\":0.0649,\"debtServiceCoverageRatio\":2.6051}}}]},\"litigation\":{\"cases\":[]}}"
+      }
+    ],
+    "temperature": 0.0,
+    "max_tokens": 4096
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "**Verdict:** Low concern: Active hospitality company with clean audits and stable financials.\n\n**Key risks:**\n- None found in the record.\n\n**Financials:** FY2024: RM 6.52m, RM 268.8k, RM 2.48m, 1.72; revenue change 4.7% FY2022 to FY2024.\n\n**People and ownership:** Directors are Director 1, Director 2, Director 3, Director 4, and Director 5. Director 2 was appointed on 2025-08-08. Main shareholders are Director 4 at 90.66% and Director 1 at 9.34%.\n\n**Data gaps:** Missing FY2023 statements.",
+          "extra_content": {
+            "google": {
+              "thought_signature": "Eo4BCosBAWkUfRNVu+P5AvtOj6nvBo5UKVlaG2iOTxgIGb3j98qOBVzVtdgISeiTDLUiG7dSPT86L4v8xfk8Bu3ktQnu9yblf+6C/fDDakzIWPYhOiaCJOzc4ViVBsoP+XfUQ7QaP/3hviUBdWbNy5qLwKcwSqWRZN+wMlyNeaTqoevKryUUs0uQBwt0ITBMIA=="
+            }
+          },
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1795392893,
+    "id": "fIUDa_O3A8Wnz7sPxLnD0AI",
+    "model": "gemini-3.5-flash-lite",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 175,
+      "prompt_tokens": 2477,
+      "total_tokens": 2652
+    }
+  }
+}

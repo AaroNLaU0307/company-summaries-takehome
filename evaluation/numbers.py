@@ -27,6 +27,7 @@ SKIP_PATTERNS = [
     r"SYN-\d+",
     r"CASE-\d{4}-\d+",
     r"\b\d{4}-\d{2}-\d{2}\b",
+    r"\b\d{1,2}[./]\d{1,2}[./]\d{4}\b",
     r"\b\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{4}\b",
     r"\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2},?\s+\d{4}\b",
     r"\bFY\s?'?\d{2,4}\b",
@@ -62,7 +63,8 @@ class Match:
 
 
 def strip_markdown(text: str) -> str:
-    t = re.sub(r"[*_`#|]", " ", text)
+    t = re.sub(r"\\text\{([^}]*)\}", r"\1", text)  # LaTeX such as $-2.03\text{M}$
+    t = re.sub(r"[*_`#|$]", " ", t)
     t = re.sub(r"^\s*[-+]\s+", " ", t, flags=re.MULTILINE)
     return re.sub(r"^\s*\d+[.)]\s+", " ", t, flags=re.MULTILINE)  # numbered list markers
 
@@ -168,6 +170,18 @@ def candidates(company: dict) -> dict[str, list[tuple[str, float]]]:
             sel = [c for c in cases if c["role"] == role and c["status"] in status_set]
             count.append((f"cases.count.{role}.{status_set_name}", len(sel)))
             money.append((f"cases.sum.{role}.{status_set_name}", sum(c["claimAmount"] for c in sel)))
+    for y in years:
+        s = y["statements"]
+        if s["currentLiabilities"]:
+            ratio.append((f"computed.currentRatio.FY{y['financialYear']}", s["currentAssets"] / s["currentLiabilities"]))
+    sums: dict[str, float] = {}
+    for c in cases:
+        for key in (f"{c['role']}|{c['caseType']}", f"{c['role']}|{c['status']}", f"{c['role']}|{c['caseType']}|{c['status']}"):
+            sums[key] = sums.get(key, 0) + c["claimAmount"]
+    sums["defendant|Pending|excl_winding_up"] = sum(
+        c["claimAmount"] for c in cases if c["role"] == "defendant" and c["status"] == "Pending" and c["caseType"] != "Winding-up petition"
+    )
+    money += [(f"cases.sum.{k}", v) for k, v in sums.items()]
     count += [("count.years", len(years)), ("count.formerNames", len(company["profile"]["formerNames"]))]
     count += [("count.directors", len(company["relationships"]["directors"]))]
     count += [("count.shareholders", len(company["relationships"]["shareholders"]))]
@@ -178,7 +192,10 @@ def candidates(company: dict) -> dict[str, list[tuple[str, float]]]:
 
 
 def _close(display: float, decimals: int, value: float) -> bool:
-    return abs(abs(display) - value) <= 0.5 * 10 ** (-decimals) + 1e-9
+    """Rounded to the displayed precision, or truncated to it (models often write 320,578 as "320k")."""
+    step = 10 ** (-decimals)
+    d = abs(display)
+    return abs(d - value) <= 0.5 * step + 1e-9 or d - 1e-9 <= value < d + step
 
 
 def match_number(n: Num, cands: dict[str, list[tuple[str, float]]]) -> str | None:

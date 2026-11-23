@@ -1,0 +1,48 @@
+{
+  "version": "v1",
+  "item_id": "SYN-001560",
+  "request_hash": "d633a2f139166214",
+  "requested_at": "2026-11-23T08:16:19+0800",
+  "elapsed_s": 3.44,
+  "request": {
+    "model": "gemini-3.5-flash-lite",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful analyst."
+      },
+      {
+        "role": "user",
+        "content": "A team vets companies before picking them as suppliers or project partners. Write a short summary of this company for them to read first, so they can decide whether it is worth a closer look. Use Markdown.\n\nCompany record (JSON):\n{\"registrationNumber\":\"SYN-001560\",\"profile\":{\"companyName\":\"Prima Global Builders Sdn. Bhd.\",\"status\":\"Active\",\"companyType\":\"Private limited company\",\"incorporationDate\":\"2023-10-29\",\"industry\":\"Construction\",\"state\":\"Selangor\",\"natureOfBusiness\":\"Pengubahsuaian dan kerja dalaman pejabat\",\"shareCapital\":1000000,\"formerNames\":[]},\"relationships\":{\"directors\":[{\"name\":\"Director 1\",\"designation\":\"Managing Director\",\"appointedOn\":\"2023-12-03\"},{\"name\":\"Director 2\",\"designation\":\"Director\",\"appointedOn\":\"2025-06-26\"},{\"name\":\"Director 3\",\"designation\":\"Executive Director\",\"appointedOn\":\"2024-08-05\"},{\"name\":\"Director 4\",\"designation\":\"Director\",\"appointedOn\":\"2025-05-06\"}],\"shareholders\":[{\"type\":\"individual\",\"name\":\"Director 2\",\"percentage\":49.22},{\"type\":\"individual\",\"name\":\"Director 3\",\"percentage\":29.62},{\"type\":\"individual\",\"name\":\"Director 4\",\"percentage\":20.54},{\"type\":\"individual\",\"name\":\"Director 1\",\"percentage\":0.62}]},\"financials\":{\"years\":[{\"financialYear\":2024,\"financialYearEnd\":\"2024-12-31\",\"audit\":{\"firm\":\"Audit Firm 2\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":4156184,\"costOfSales\":3492714,\"grossProfit\":663470,\"operatingExpenses\":800223,\"operatingProfit\":-136753,\"depreciation\":213864,\"interestExpense\":62696,\"profitBeforeTax\":-199449,\"taxExpense\":0,\"profitAfterTax\":-199449,\"cash\":475281,\"tradeReceivables\":742058,\"inventory\":993210,\"currentAssets\":2392210,\"nonCurrentAssets\":1241008,\"totalAssets\":3633218,\"tradePayables\":412852,\"borrowings\":1139919,\"currentLiabilities\":1009646,\"totalLiabilities\":2062406,\"totalEquity\":1570812,\"operatingCashFlow\":-30647,\"capitalExpenditure\":180741,\"borrowingsRepaid\":197291},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.1596,\"operatingProfitMargin\":-0.0329,\"ebitda\":77111,\"ebitdaMargin\":0.0186,\"operatingExpenseRatio\":0.1925,\"netProfitMargin\":-0.048,\"taxEfficiencyRatio\":null},\"liquidityAndCashFlow\":{\"quickRatio\":1.3856,\"cashRatio\":0.4707,\"cashToRevenueRatio\":0.1144,\"operatingCashFlow\":-30647,\"operatingCashFlowMargin\":-0.0074,\"freeCashFlow\":-211388,\"accrualRatio\":-0.0465},\"operationalEfficiency\":{\"cashConversionCycle\":125.8175,\"daysSalesOutstanding\":65.1682,\"daysInventoryOutstanding\":103.7937,\"daysPayablesOutstanding\":43.1444,\"inventoryTurnover\":3.5166,\"receivablesTurnover\":5.6009,\"assetTurnoverRatio\":1.1439,\"netWorkingCapital\":1382564},\"capitalStructure\":{\"leverageRatio\":1.313,\"interestCoverageRatio\":-2.1812,\"fixedAssetComposition\":0.3416,\"depreciationToAssetRatio\":0.0589,\"debtServiceCoverageRatio\":0.2966}}}]},\"litigation\":{\"cases\":[]}}"
+      }
+    ],
+    "temperature": 0.0,
+    "max_tokens": 4096
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "### Executive Summary: Prima Global Builders Sdn. Bhd.\n\n**Registration / Status:** SYN-001560 | Active (Incorporated: Oct 2023)  \n**Industry / Focus:** Construction (Office interior renovation and fit-out)  \n**Location:** Selangor, Malaysia  \n**Share Capital:** RM1,000,000  \n**Litigation:** None recorded  \n\n---\n\n#### 📊 2024 Financial Highlights\n* **Revenue:** RM4.16 million  \n* **Profitability:** Net loss of **-RM199,449** (Gross Profit Margin: 16.0%; Operating Margin: -3.3%). Losses were driven by high operating expenses (RM800k) relative to gross profits.\n* **Liquidity:** Sound short-term liquidity with a Quick Ratio of **1.39** and a Cash Ratio of **0.47** (Cash on hand: RM475k against current liabilities of RM1.01M).\n* **Cash Flow:** Negative operating cash flow (**-RM30,647**) and free cash flow (**-RM211,388**) for the 2024 financial year.\n* **Leverage:** Moderate debt profile with total liabilities of RM2.06M against total equity of RM1.57M (Leverage Ratio: 1.31; Interest Coverage Ratio: -2.18 due to operating losses).\n\n#### 👥 Key Stakeholders & Leadership\n* **Managing Director:** Director 1 (0.62% shareholding, appointed Dec 2023)\n* **Major Shareholders:** \n  * Director 2 (49.22% shareholding, Director)\n  * Director 3 (29.62% shareholding, Executive Director)\n  * Director 4 (20.54% shareholding, Director)\n\n---\n\n### **Verdict / Recommendation for Vetting**\n* **Worth a closer look?** **Yes, conditionally.** \n* **Key Strengths:** Decent top-line revenue generation for a first full year of operations (~RM4.16M), healthy capital backing (RM1M share capital), clean litigation record, and acceptable immediate liquidity (Quick Ratio > 1). \n* **Key Risks:** The company operated at a net loss in 2024 with negative operating cash flows and a stretched cash conversion cycle (approx. 126 days). \n\n*Recommended next steps:* Request interim management accounts for 2025 to evaluate if margins and cash flows have stabilized since their 2024 inception-year performance.",
+          "extra_content": {
+            "google": {
+              "thought_signature": "Eo4BCosBAWkUfROAEv9y2L4mQlYT7xiOTwbwqRePOPXoEC3yssgqxPOQM5yaxuZGki0blmMqniJvmSIsU5Mn1CNyZfgryqPMXBTYQ5yurQvrKaW4CoYBTpTSysDJGQgo+lp/T0jzZw3TXnhIOWSFGnToX2pkfcyQazyubGZDPo3jZeiuR8dlHHHB9dDAAfLcEA=="
+            }
+          },
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1795392979,
+    "id": "0IUDa_XKCLD6g8UPqemv0Qk",
+    "model": "gemini-3.5-flash-lite",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 580,
+      "prompt_tokens": 969,
+      "total_tokens": 1549
+    }
+  }
+}

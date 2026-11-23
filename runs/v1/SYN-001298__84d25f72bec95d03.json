@@ -1,0 +1,48 @@
+{
+  "version": "v1",
+  "item_id": "SYN-001298",
+  "request_hash": "84d25f72bec95d03",
+  "requested_at": "2026-11-23T08:08:03+0800",
+  "elapsed_s": 5.3,
+  "request": {
+    "model": "gemini-3.5-flash-lite",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful analyst."
+      },
+      {
+        "role": "user",
+        "content": "A team vets companies before picking them as suppliers or project partners. Write a short summary of this company for them to read first, so they can decide whether it is worth a closer look. Use Markdown.\n\nCompany record (JSON):\n{\"registrationNumber\":\"SYN-001298\",\"profile\":{\"companyName\":\"Mutiara Delima Agro Sdn. Bhd.\",\"status\":\"Active\",\"companyType\":\"Private limited company\",\"incorporationDate\":\"2023-04-11\",\"industry\":\"Agriculture\",\"state\":\"Kuala Lumpur\",\"natureOfBusiness\":\"Oil palm plantation and fresh fruit bunch supply\",\"shareCapital\":250000,\"formerNames\":[{\"name\":\"Sejahtera Resources Sdn. Bhd.\",\"changedOn\":\"2023-11-27\"}]},\"relationships\":{\"directors\":[{\"name\":\"Director 1\",\"designation\":\"Managing Director\",\"appointedOn\":\"2023-10-24\"},{\"name\":\"Director 2\",\"designation\":\"Independent Director\",\"appointedOn\":\"2025-04-14\"},{\"name\":\"Director 3\",\"designation\":\"Director\",\"appointedOn\":\"2024-11-28\"},{\"name\":\"Director 4\",\"designation\":\"Executive Director\",\"appointedOn\":\"2024-04-21\"}],\"shareholders\":[{\"type\":\"individual\",\"name\":\"Director 4\",\"percentage\":24.2},{\"type\":\"individual\",\"name\":\"Director 1\",\"percentage\":16.88},{\"type\":\"individual\",\"name\":\"Director 3\",\"percentage\":58.92}]},\"financials\":{\"years\":[{\"financialYear\":2024,\"financialYearEnd\":\"2024-12-31\",\"audit\":{\"firm\":\"Audit Firm 6\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":74303529,\"costOfSales\":58646332,\"grossProfit\":15657197,\"operatingExpenses\":18190326,\"operatingProfit\":-2533129,\"depreciation\":3468966,\"interestExpense\":1125446,\"profitBeforeTax\":-3658575,\"taxExpense\":0,\"profitAfterTax\":-3658575,\"cash\":10649316,\"tradeReceivables\":20168743,\"inventory\":16298145,\"currentAssets\":52183296,\"nonCurrentAssets\":49158553,\"totalAssets\":101341849,\"tradePayables\":8926032,\"borrowings\":20462654,\"currentLiabilities\":18007222,\"totalLiabilities\":35273473,\"totalEquity\":66068376,\"operatingCashFlow\":-1575359,\"capitalExpenditure\":5068597,\"borrowingsRepaid\":3209087},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.2107,\"operatingProfitMargin\":-0.0341,\"ebitda\":935837,\"ebitdaMargin\":0.0126,\"operatingExpenseRatio\":0.2448,\"netProfitMargin\":-0.0492,\"taxEfficiencyRatio\":null},\"liquidityAndCashFlow\":{\"quickRatio\":1.9928,\"cashRatio\":0.5914,\"cashToRevenueRatio\":0.1433,\"operatingCashFlow\":-1575359,\"operatingCashFlowMargin\":-0.0212,\"freeCashFlow\":-6643956,\"accrualRatio\":-0.0206},\"operationalEfficiency\":{\"cashConversionCycle\":144.9567,\"daysSalesOutstanding\":99.0746,\"daysInventoryOutstanding\":101.4355,\"daysPayablesOutstanding\":55.5534,\"inventoryTurnover\":3.5983,\"receivablesTurnover\":3.6841,\"assetTurnoverRatio\":0.7332,\"netWorkingCapital\":34176074},\"capitalStructure\":{\"leverageRatio\":0.5339,\"interestCoverageRatio\":-2.2508,\"fixedAssetComposition\":0.4851,\"depreciationToAssetRatio\":0.0342,\"debtServiceCoverageRatio\":0.2159}}}]},\"litigation\":{\"cases\":[]}}"
+      }
+    ],
+    "temperature": 0.0,
+    "max_tokens": 4096
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "### Executive Summary: Mutiara Delima Agro Sdn. Bhd. (SYN-001298)\n\n* **Status & Industry:** Active private limited company incorporated in April 2023 (formerly *Sejahtera Resources Sdn. Bhd.*). Operates out of Kuala Lumpur in the **Agriculture** sector, focusing on oil palm plantations and fresh fruit bunch supply.\n* **Scale & Assets:** Registered share capital of 250,000 MYR, backed by a substantial asset base of **101.34M MYR** (approx. 52.18M MYR in current assets) and total equity of **66.07M MYR** as of FY2024.\n* **Ownership & Governance:** Controlled primarily by three individual directors/shareholders: Director 3 (58.92%), Director 4 (24.20%), and Director 1 (16.88%). \n* **Financial Performance (FY2024):**\n  * **Revenue:** Solid top-line performance at **74.30M MYR** with a healthy gross profit margin of **21.1%** (Gross Profit: 15.66M MYR).\n  * **Profitability:** Net loss of **-3.66M MYR** (Operating Profit: -2.53M MYR), driven by high operating expenses (18.19M MYR) and interest expenses (1.13M MYR). \n  * **Audit:** Received an **Unqualified** (clean) audit opinion from Audit Firm 6.\n* **Liquidity & Cash Flow:** \n  * Strong short-term liquidity with a quick ratio of **1.99** and **10.65M MYR** in cash.\n  * However, cash flow is under pressure with a negative operating cash flow of **-1.58M MYR** and negative free cash flow (-6.64M MYR).\n  * Working capital is healthy (34.18M MYR), though the cash conversion cycle is lengthy at ~145 days.\n* **Risk & Litigation:** **No recorded litigation cases.** Total liabilities stand at 35.27M MYR, including 20.46M MYR in borrowings.\n\n#### Recommendation for Vetting Team\n**Worth a closer look.** While the company is operating at a net loss and experiencing negative operating cash flow, its substantial asset backing, clean audit opinion, strong revenue generation, and solid liquidity position (healthy cash reserves and quick ratio) make it a viable candidate for further due diligence, particularly regarding its cost structure and cash flow management.",
+          "extra_content": {
+            "google": {
+              "thought_signature": "Eo4BCosBAWkUfRPrv9roZWdBgCqn9CJPt1bK5Nu1zr84gLZRpaboqNKO13egFx9g0fICTU3OxHLVCii0KyiBunp96cHiwef4SGfU09uVxsuC8oshjN8U8Of6pqAf6dGG8SbRdWthHUFlZTS1e8KMTMPvBXCZz+kwUTs5t7knBoGeS0yyiaG9owagp+1nH+/Wqg=="
+            }
+          },
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1795392483,
+    "id": "3oMDa46nH5CgjuMP5JzE-Qo",
+    "model": "gemini-3.5-flash-lite",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 582,
+      "prompt_tokens": 1015,
+      "total_tokens": 1597
+    }
+  }
+}

@@ -13,7 +13,7 @@ import statistics
 import sys
 from pathlib import Path
 
-from evaluation.checks import contradictions, flag_results, stated_verdict, structure_ok, word_count
+from evaluation.checks import contradictions, financials_labelled, flag_results, stated_verdict, structure_ok, word_count
 from evaluation.numbers import check_summary
 from summarizer.data import ROOT, load_companies
 from summarizer.facts import build_facts
@@ -54,6 +54,7 @@ def score_version(version: str, summaries: dict[str, str], companies: list[dict]
                 "structure_ok": ok,
                 "structure_missing": missing,
                 "stated_verdict": stated_verdict(text),
+                "financials_labelled": financials_labelled(text) if company["financials"]["years"] and version in STRUCTURED_VERSIONS else None,
                 "numbers": [
                     {"text": m.num.text, "kind": m.num.kind, "matched": m.matched, "path": m.path, "context": m.context}
                     for m in nums
@@ -106,6 +107,8 @@ def metrics(version: str, rows: list[dict]) -> dict:
         "structure_compliance": _share(sum(r["structure_ok"] for r in rows), len(rows)),
         "structure_requested": version in STRUCTURED_VERSIONS,
         "verdict_stated": len(with_verdict),
+        "financials_labelled": _share(sum(r["financials_labelled"] is True for r in rows), sum(r["financials_labelled"] is not None for r in rows)),
+        "financials_labelled_counts": f"{sum(r['financials_labelled'] is True for r in rows)}/{sum(r['financials_labelled'] is not None for r in rows)}",
         "verdict_agreement": _share(sum(r["stated_verdict"] == r["triage"].lower() for r in with_verdict), len(with_verdict)),
     }
 
@@ -168,6 +171,7 @@ def write_report(results: list[dict]) -> str:
         ("Words, min to max", None),
         ("Length within 80 to 150 words", "length_compliance"),
         ("Fixed structure present (asked for only in v2)", "structure_compliance"),
+        ("Financials line labels its numbers (structured versions, added after reading v2)", "financials_labelled_counts"),
         ("Summaries stating a triage verdict", "verdict_stated"),
         ("Verdict matches computed triage (of those stating one)", "verdict_agreement"),
     ]

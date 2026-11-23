@@ -1,0 +1,48 @@
+{
+  "version": "v1",
+  "item_id": "SYN-001294",
+  "request_hash": "56b3b0a2700654d8",
+  "requested_at": "2026-11-23T08:15:00+0800",
+  "elapsed_s": 2.66,
+  "request": {
+    "model": "gemini-3.5-flash-lite",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful analyst."
+      },
+      {
+        "role": "user",
+        "content": "A team vets companies before picking them as suppliers or project partners. Write a short summary of this company for them to read first, so they can decide whether it is worth a closer look. Use Markdown.\n\nCompany record (JSON):\n{\"registrationNumber\":\"SYN-001294\",\"profile\":{\"companyName\":\"Maju Jaya Management Sdn. Bhd.\",\"status\":\"Active\",\"companyType\":\"Private limited company\",\"incorporationDate\":\"2023-11-01\",\"industry\":\"Professional Services\",\"state\":\"Pahang\",\"natureOfBusiness\":\"Perunding pengurusan untuk PKS\",\"shareCapital\":100000,\"formerNames\":[]},\"relationships\":{\"directors\":[{\"name\":\"Director 1\",\"designation\":\"Managing Director\",\"appointedOn\":\"2024-12-01\"},{\"name\":\"Director 2\",\"designation\":\"Executive Director\",\"appointedOn\":\"2024-11-26\"},{\"name\":\"Director 3\",\"designation\":\"Director\",\"appointedOn\":\"2025-09-22\"},{\"name\":\"Director 4\",\"designation\":\"Independent Director\",\"appointedOn\":\"2025-04-27\"},{\"name\":\"Director 5\",\"designation\":\"Director\",\"appointedOn\":\"2024-11-19\"}],\"shareholders\":[{\"type\":\"individual\",\"name\":\"Director 1\",\"percentage\":63.59},{\"type\":\"individual\",\"name\":\"Director 5\",\"percentage\":13.96},{\"type\":\"individual\",\"name\":\"Director 3\",\"percentage\":16.32},{\"type\":\"individual\",\"name\":\"Director 2\",\"percentage\":6.13}]},\"financials\":{\"years\":[{\"financialYear\":2024,\"financialYearEnd\":\"2024-09-30\",\"audit\":{\"firm\":\"Audit Firm 5\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":10153873,\"costOfSales\":4439030,\"grossProfit\":5714843,\"operatingExpenses\":6484504,\"operatingProfit\":-769661,\"depreciation\":376831,\"interestExpense\":73488,\"profitBeforeTax\":-843149,\"taxExpense\":0,\"profitAfterTax\":-843149,\"cash\":785513,\"tradeReceivables\":1088023,\"inventory\":0,\"currentAssets\":2261024,\"nonCurrentAssets\":5488743,\"totalAssets\":7749767,\"tradePayables\":663352,\"borrowings\":1336153,\"currentLiabilities\":1340286,\"totalLiabilities\":2551682,\"totalEquity\":5198085,\"operatingCashFlow\":-164558,\"capitalExpenditure\":707523,\"borrowingsRepaid\":111634},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.5628,\"operatingProfitMargin\":-0.0758,\"ebitda\":-392830,\"ebitdaMargin\":-0.0387,\"operatingExpenseRatio\":0.6386,\"netProfitMargin\":-0.083,\"taxEfficiencyRatio\":null},\"liquidityAndCashFlow\":{\"quickRatio\":1.687,\"cashRatio\":0.5861,\"cashToRevenueRatio\":0.0774,\"operatingCashFlow\":-164558,\"operatingCashFlowMargin\":-0.0162,\"freeCashFlow\":-872081,\"accrualRatio\":-0.0876},\"operationalEfficiency\":{\"cashConversionCycle\":-15.4332,\"daysSalesOutstanding\":39.111,\"daysInventoryOutstanding\":null,\"daysPayablesOutstanding\":54.5442,\"inventoryTurnover\":null,\"receivablesTurnover\":9.3324,\"assetTurnoverRatio\":1.3102,\"netWorkingCapital\":920738},\"capitalStructure\":{\"leverageRatio\":0.4909,\"interestCoverageRatio\":-10.4733,\"fixedAssetComposition\":0.7082,\"depreciationToAssetRatio\":0.0486,\"debtServiceCoverageRatio\":-2.122}}}]},\"litigation\":{\"cases\":[]}}"
+      }
+    ],
+    "temperature": 0.0,
+    "max_tokens": 4096
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "### Executive Summary: Maju Jaya Management Sdn. Bhd.\n\n**Registration:** SYN-001294 (Active, Private Limited)  \n**Incorporated:** November 1, 2023 (Pahang, Malaysia)  \n**Industry / Focus:** Professional Services — Management consulting for SMEs (*Perunding pengurusan untuk PKS*)  \n**Share Capital:** 100,000 MYR  \n\n---\n\n#### 1. Ownership & Governance\n* **Key Leadership:** Managed by a 5-person board, led by Managing Director (\"Director 1\"). Note: Some board appointments extend into late 2025 in the record, which should be verified against actual filings.\n* **Major Shareholders:** \n  * Director 1: **63.59%** (Majority owner)\n  * Director 3: **16.32%**\n  * Director 5: **13.96%**\n  * Director 2: **6.13%**\n\n#### 2. Financial Health (FY2024, ended Sept 30, 2024)\n* **Audit Opinion:** **Unqualified** (Clean audit by Audit Firm 5).\n* **Revenue & Scale:** Generated **~10.15M MYR** in revenue with a strong gross profit margin of **56.28%** (Gross Profit: 5.71M MYR).\n* **Profitability Concerns:** Despite healthy top-line figures, high operating expenses resulted in an operating loss (**-769.6k MYR**) and a net loss after tax of **-843.1k MYR** (Net Profit Margin: -8.3%).\n* **Cash Flow & Liquidity:** \n  * Negative operating cash flow (**-164.5k MYR**) and free cash flow (**-872.1k MYR**), driven by capital expenditures (707.5k MYR).\n  * However, short-term liquidity remains manageable with a Quick Ratio of **1.69** and cash reserves of **785.5k MYR**.\n* **Debt & Leverage:** Total liabilities stand at 2.55M MYR against total equity of 5.20M MYR, reflecting a moderate leverage ratio of **0.49**.\n\n#### 3. Risk & Compliance\n* **Litigation:** **0 active cases** reported.\n\n---\n\n### Recommendation for Closer Look: **MAYBE / PROCEED WITH CAUTION**\n\n* **Pros:** Clean audit opinion, solid revenue scale for a relatively young company, strong gross margins, and no recorded litigation. \n* **Cons/Risks:** Currently unprofitable with negative operating cash flows during its 2024 financial year. \n\n*If vetting for a **supplier or partner**, ensure they have sufficient working capital to sustain operations given their net loss position, or request interim management accounts for 2025 to check for turnaround progress.*",
+          "extra_content": {
+            "google": {
+              "thought_signature": "Eo4BCosBAWkUfRNQcWk55QlXm7MKI/tXV+iSli46cdyCmw7rwzodhGmvbzHejEWkvLKH7CBSEM3nHi1U1xAFXZtiKTJsjMiAYzRu2CNrGSW3k6baQot8iHs0x0IRTLOem9j1uZnqOxNJds7n3G7+DBiNDGVqt2BrvVNow4qMh7NHxyPGqaOeClQhhpxUhnMKoA=="
+            }
+          },
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1795392900,
+    "id": "goUDa7yICYaP694Pu-PfwAE",
+    "model": "gemini-3.5-flash-lite",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 650,
+      "prompt_tokens": 984,
+      "total_tokens": 1634
+    }
+  }
+}

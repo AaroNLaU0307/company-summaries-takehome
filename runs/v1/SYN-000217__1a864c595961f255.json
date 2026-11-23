@@ -1,0 +1,48 @@
+{
+  "version": "v1",
+  "item_id": "SYN-000217",
+  "request_hash": "1a864c595961f255",
+  "requested_at": "2026-11-23T08:07:25+0800",
+  "elapsed_s": 4.91,
+  "request": {
+    "model": "gemini-3.5-flash-lite",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful analyst."
+      },
+      {
+        "role": "user",
+        "content": "A team vets companies before picking them as suppliers or project partners. Write a short summary of this company for them to read first, so they can decide whether it is worth a closer look. Use Markdown.\n\nCompany record (JSON):\n{\"registrationNumber\":\"SYN-000217\",\"profile\":{\"companyName\":\"Teguh Bestari Learning Sdn. Bhd.\",\"status\":\"Active\",\"companyType\":\"Private limited company\",\"incorporationDate\":\"1991-12-07\",\"industry\":\"Education\",\"state\":\"Selangor\",\"natureOfBusiness\":\"Tadika swasta dan taska di Johor Bahru\",\"shareCapital\":2500000,\"formerNames\":[]},\"relationships\":{\"directors\":[{\"name\":\"Director 1\",\"designation\":\"Managing Director\",\"appointedOn\":\"1995-05-25\"},{\"name\":\"Director 2\",\"designation\":\"Director\",\"appointedOn\":\"2000-04-21\"}],\"shareholders\":[{\"type\":\"individual\",\"name\":\"Director 2\",\"percentage\":48.98},{\"type\":\"individual\",\"name\":\"Director 1\",\"percentage\":51.02}]},\"financials\":{\"years\":[{\"financialYear\":2022,\"financialYearEnd\":\"2022-12-31\",\"audit\":{\"firm\":\"Audit Firm 3\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":2976052,\"costOfSales\":1482780,\"grossProfit\":1493272,\"operatingExpenses\":1233626,\"operatingProfit\":259646,\"depreciation\":147601,\"interestExpense\":77495,\"profitBeforeTax\":182151,\"taxExpense\":43716,\"profitAfterTax\":138435,\"cash\":377113,\"tradeReceivables\":575160,\"inventory\":0,\"currentAssets\":1120610,\"nonCurrentAssets\":2246131,\"totalAssets\":3366741,\"tradePayables\":305897,\"borrowings\":1409008,\"currentLiabilities\":898964,\"totalLiabilities\":2055635,\"totalEquity\":1311106,\"operatingCashFlow\":249746,\"capitalExpenditure\":80950,\"borrowingsRepaid\":135525},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.5018,\"operatingProfitMargin\":0.0872,\"ebitda\":407247,\"ebitdaMargin\":0.1368,\"operatingExpenseRatio\":0.4145,\"netProfitMargin\":0.0465,\"taxEfficiencyRatio\":0.76},\"liquidityAndCashFlow\":{\"quickRatio\":1.2466,\"cashRatio\":0.4195,\"cashToRevenueRatio\":0.1267,\"operatingCashFlow\":249746,\"operatingCashFlowMargin\":0.0839,\"freeCashFlow\":168796,\"accrualRatio\":-0.0331},\"operationalEfficiency\":{\"cashConversionCycle\":-4.7585,\"daysSalesOutstanding\":70.5409,\"daysInventoryOutstanding\":null,\"daysPayablesOutstanding\":75.2994,\"inventoryTurnover\":null,\"receivablesTurnover\":5.1743,\"assetTurnoverRatio\":0.884,\"netWorkingCapital\":221646},\"capitalStructure\":{\"leverageRatio\":1.5679,\"interestCoverageRatio\":3.3505,\"fixedAssetComposition\":0.6672,\"depreciationToAssetRatio\":0.0438,\"debtServiceCoverageRatio\":1.9118}}},{\"financialYear\":2023,\"financialYearEnd\":\"2023-12-31\",\"audit\":{\"firm\":\"Audit Firm 3\",\"opinion\":\"Disclaimer of opinion\"},\"statements\":{\"revenue\":4101556,\"costOfSales\":2128804,\"grossProfit\":1972752,\"operatingExpenses\":1568661,\"operatingProfit\":404091,\"depreciation\":203421,\"interestExpense\":106803,\"profitBeforeTax\":297288,\"taxExpense\":71349,\"profitAfterTax\":225939,\"cash\":579295,\"tradeReceivables\":731313,\"inventory\":0,\"currentAssets\":1542608,\"nonCurrentAssets\":3097390,\"totalAssets\":4639998,\"tradePayables\":545795,\"borrowings\":1941877,\"currentLiabilities\":1469890,\"totalLiabilities\":3170735,\"totalEquity\":1469263,\"operatingCashFlow\":392532,\"capitalExpenditure\":87991,\"borrowingsRepaid\":370828},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.481,\"operatingProfitMargin\":0.0985,\"ebitda\":607512,\"ebitdaMargin\":0.1481,\"operatingExpenseRatio\":0.3825,\"netProfitMargin\":0.0551,\"taxEfficiencyRatio\":0.76},\"liquidityAndCashFlow\":{\"quickRatio\":1.0495,\"cashRatio\":0.3941,\"cashToRevenueRatio\":0.1412,\"operatingCashFlow\":392532,\"operatingCashFlowMargin\":0.0957,\"freeCashFlow\":304541,\"accrualRatio\":-0.0359},\"operationalEfficiency\":{\"cashConversionCycle\":-28.5008,\"daysSalesOutstanding\":65.08,\"daysInventoryOutstanding\":null,\"daysPayablesOutstanding\":93.5808,\"inventoryTurnover\":null,\"receivablesTurnover\":5.6085,\"assetTurnoverRatio\":0.884,\"netWorkingCapital\":72718},\"capitalStructure\":{\"leverageRatio\":2.158,\"interestCoverageRatio\":3.7835,\"fixedAssetComposition\":0.6675,\"depreciationToAssetRatio\":0.0438,\"debtServiceCoverageRatio\":1.2719}}},{\"financialYear\":2024,\"financialYearEnd\":\"2024-12-31\",\"audit\":{\"firm\":\"Audit Firm 3\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":5606840,\"costOfSales\":2573177,\"grossProfit\":3033663,\"operatingExpenses\":2379256,\"operatingProfit\":654407,\"depreciation\":278077,\"interestExpense\":146000,\"profitBeforeTax\":508407,\"taxExpense\":122018,\"profitAfterTax\":386389,\"cash\":708977,\"tradeReceivables\":985211,\"inventory\":0,\"currentAssets\":2011333,\"nonCurrentAssets\":4331559,\"totalAssets\":6342892,\"tradePayables\":656207,\"borrowings\":2654552,\"currentLiabilities\":2098772,\"totalLiabilities\":4603157,\"totalEquity\":1739735,\"operatingCashFlow\":523695,\"capitalExpenditure\":165847,\"borrowingsRepaid\":472716},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.5411,\"operatingProfitMargin\":0.1167,\"ebitda\":932484,\"ebitdaMargin\":0.1663,\"operatingExpenseRatio\":0.4243,\"netProfitMargin\":0.0689,\"taxEfficiencyRatio\":0.76},\"liquidityAndCashFlow\":{\"quickRatio\":0.9583,\"cashRatio\":0.3378,\"cashToRevenueRatio\":0.1264,\"operatingCashFlow\":523695,\"operatingCashFlowMargin\":0.0934,\"freeCashFlow\":357848,\"accrualRatio\":-0.0216},\"operationalEfficiency\":{\"cashConversionCycle\":-28.9453,\"daysSalesOutstanding\":64.1363,\"daysInventoryOutstanding\":null,\"daysPayablesOutstanding\":93.0816,\"inventoryTurnover\":null,\"receivablesTurnover\":5.691,\"assetTurnoverRatio\":0.884,\"netWorkingCapital\":-87439},\"capitalStructure\":{\"leverageRatio\":2.6459,\"interestCoverageRatio\":4.4822,\"fixedAssetComposition\":0.6829,\"depreciationToAssetRatio\":0.0438,\"debtServiceCoverageRatio\":1.5071}}}]},\"litigation\":{\"cases\":[]}}"
+      }
+    ],
+    "temperature": 0.0,
+    "max_tokens": 4096
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "### Executive Summary: Teguh Bestari Learning Sdn. Bhd.\n\n**Registration Number:** SYN-000217  \n**Status:** Active | **Incorporation Date:** 1991-12-07  \n**Industry:** Education (Private kindergartens and nurseries in Johor Bahru)  \n**Registered State:** Selangor | **Share Capital:** RM2,500,000  \n\n---\n\n#### 1. Business Overview & Ownership\n* **Operations:** Operates private early childhood education facilities (kindergartens and nurseries) primarily located in Johor Bahru.\n* **Leadership & Shareholding:** Privately held by two directors who act as the sole shareholders:\n  * **Director 1** (Managing Director) – 51.02%\n  * **Director 2** (Director) – 48.98%\n\n#### 2. Financial Performance (2022–2024)\nThe company demonstrates consistent top-line and bottom-line growth, alongside healthy profitability margins:\n* **Revenue:** Grew steadily from RM2.98M (2022) to RM4.10M (2023) and reached RM5.61M in 2024.\n* **Profit After Tax (PAT):** Increased from RM138.4k (2022) to RM225.9k (2023), and further to RM386.4k in 2024.\n* **Margins (2024):** Gross profit margin stands strong at **54.11%**, with a net profit margin of **6.89%**.\n* **Cash Flow:** Maintains positive operating cash flow, improving from RM249.7k in 2022 to RM523.7k in 2024.\n\n#### 3. Risk & Compliance Assessment\n* **Audit History:** \n  * *2022:* Unqualified opinion.\n  * *2023:* **Disclaimer of opinion** (requires closer inquiry to understand the auditor's reservation for that specific financial year).\n  * *2024:* Returned to an Unqualified opinion.\n* **Liquidity & Working Capital:** The quick ratio dipped slightly below 1.0 in 2024 (0.95), and net working capital turned negative (-RM87.4k), driven by higher short-term obligations relative to current assets. \n* **Leverage:** Total borrowings have scaled up alongside business expansion (from RM1.41M in 2022 to RM2.65M in 2024), though interest coverage remains stable and healthy at 4.48x (2024).\n* **Litigation:** No recorded legal cases or disputes.\n\n---\n\n### Recommendation for Closer Look\n**Worth a closer look, with caveats.** \n\nTeguh Bestari Learning shows solid commercial growth, expanding revenues, and consistent operational cash generation in the education sector. However, the vetting team should request clarification regarding the **2023 audit disclaimer of opinion** and evaluate how management plans to address the tighter working capital position observed in 2024 before entering into a long-term partnership.",
+          "extra_content": {
+            "google": {
+              "thought_signature": "Eo4BCosBAWkUfRP/PvkgLuPkCgEcS6vj5DkdZcYDrLt2bq46zt9D1hP68p4bLawGz10H1kPeBvoIcG1vn/1znBChbpcnrfmn+LU9RML0byZzxFz27zGLY89DrDLOZlwav+/x28nb7uDDMXwnfl8JH/mmyWYGknudc9gG5s0fkJ7il6QmmyLHnqXKu36CuvUO/Q=="
+            }
+          },
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1795392445,
+    "id": "uYMDa-mEGrzYjNAPmLzxwA8",
+    "model": "gemini-3.5-flash-lite",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 710,
+      "prompt_tokens": 2086,
+      "total_tokens": 2796
+    }
+  }
+}

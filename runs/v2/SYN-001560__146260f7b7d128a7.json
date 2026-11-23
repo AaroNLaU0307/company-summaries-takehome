@@ -1,0 +1,48 @@
+{
+  "version": "v2",
+  "item_id": "SYN-001560",
+  "request_hash": "146260f7b7d128a7",
+  "requested_at": "2026-11-23T08:16:25+0800",
+  "elapsed_s": 2.7,
+  "request": {
+    "model": "gemini-3.5-flash-lite",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You write triage notes for a supplier-vetting team. The reader has 30 seconds to decide whether a company is worth a closer look. Risk signals come first. Accuracy matters more than style: one invented number makes every note useless.\n\nRules:\n1. Use only facts from the FACTS SHEET and the RECORD. Never invent numbers, causes, plans or outside context.\n2. Copy amounts and ratios as they are written in the FACTS SHEET (for example \"RM 5.35m\", \"0.63\"). Do not do new arithmetic.\n3. The Verdict line starts with the computed triage level exactly as given (High concern, Review or Low concern).\n4. Every [high] and [medium] red flag in the FACTS SHEET must appear under Key risks, most serious first, each with its key number (count, amount, ratio or year). Give each flag its own bullet. For litigation give counts and totals, not case numbers. Say which financial year a non-clean audit opinion was for.\n5. If there are no [high] or [medium] flags, write \"- None found in the record.\" under Key risks.\n6. If data is missing, say so in Data gaps. Never describe a trend that the data cannot show. There are no FY2025 figures.\n7. Mention recent director appointments, a recent name change or a corporate parent under People and ownership.\n8. Total length 80 to 150 words. Plain words, short sentences. No advice beyond the triage call. Do not use the em dash character; use commas, colons or full stops.\n\nWrite exactly this Markdown structure and nothing else:\n\n**Verdict:** <triage level>: <main reason in one sentence>.\n\n**Key risks:**\n- <flag with key number>\n\n**Financials:** <latest year: revenue, profit after tax, equity, quick ratio; revenue change where there are two years, or \"no financial statements filed\">\n\n**People and ownership:** <directors, recent appointments, main shareholders, corporate parent>\n\n**Data gaps:** <what is missing, or \"None\">"
+      },
+      {
+        "role": "user",
+        "content": "FACTS SHEET (computed by code from the record) for Prima Global Builders Sdn. Bhd. (SYN-001560)\nComputed triage level: Review\nRed flags, most serious first:\n- [medium] Net loss of -RM 199.4k in FY2024.\n- [medium] Negative operating cash flow of -RM 30.6k in FY2024.\n- [medium] Debt service strain in FY2024: interest coverage -2.18x (below 1.5), debt service coverage 0.30x (below 1.0).\nContext (low severity):\n- Only one year of financial statements (FY2024); no trend.\n- 2 of 4 director(s) appointed in the last 12 months: Director 2 (Director, 2025-06-26), Director 4 (Director, 2025-05-06).\n- Young company: incorporated 2023-10-29.\nKey numbers:\n- status: Active\n- industry: Construction\n- state: Selangor\n- incorporated: 2023-10-29\n- share_capital: RM 1.00m\n- litigation: No court cases on record\n- financial_years: FY2024\n- latest_year: FY2024 (year end 2024-12-31)\n- latest_revenue: RM 4.16m\n- latest_profit_after_tax: -RM 199.4k\n- latest_total_equity: RM 1.57m\n- latest_operating_cash_flow: -RM 30.6k\n- latest_borrowings: RM 1.14m\n- latest_quick_ratio: 1.39\n- latest_interest_coverage: -2.18\n- latest_debt_service_coverage: 0.3\n- latest_liabilities_to_equity: 1.31\n- latest_net_profit_margin: -4.8%\n- audit_opinions: FY2024 Unqualified\n- directors: 4 director(s)\n- shareholders: Director 2 49.22%; Director 3 29.62%; Director 4 20.54%; Director 1 0.62%\nData gaps: Only FY2024 statements; no trend available.\n\nRECORD (JSON):\n{\"registrationNumber\":\"SYN-001560\",\"profile\":{\"companyName\":\"Prima Global Builders Sdn. Bhd.\",\"status\":\"Active\",\"companyType\":\"Private limited company\",\"incorporationDate\":\"2023-10-29\",\"industry\":\"Construction\",\"state\":\"Selangor\",\"natureOfBusiness\":\"Pengubahsuaian dan kerja dalaman pejabat\",\"shareCapital\":1000000,\"formerNames\":[]},\"relationships\":{\"directors\":[{\"name\":\"Director 1\",\"designation\":\"Managing Director\",\"appointedOn\":\"2023-12-03\"},{\"name\":\"Director 2\",\"designation\":\"Director\",\"appointedOn\":\"2025-06-26\"},{\"name\":\"Director 3\",\"designation\":\"Executive Director\",\"appointedOn\":\"2024-08-05\"},{\"name\":\"Director 4\",\"designation\":\"Director\",\"appointedOn\":\"2025-05-06\"}],\"shareholders\":[{\"type\":\"individual\",\"name\":\"Director 2\",\"percentage\":49.22},{\"type\":\"individual\",\"name\":\"Director 3\",\"percentage\":29.62},{\"type\":\"individual\",\"name\":\"Director 4\",\"percentage\":20.54},{\"type\":\"individual\",\"name\":\"Director 1\",\"percentage\":0.62}]},\"financials\":{\"years\":[{\"financialYear\":2024,\"financialYearEnd\":\"2024-12-31\",\"audit\":{\"firm\":\"Audit Firm 2\",\"opinion\":\"Unqualified\"},\"statements\":{\"revenue\":4156184,\"costOfSales\":3492714,\"grossProfit\":663470,\"operatingExpenses\":800223,\"operatingProfit\":-136753,\"depreciation\":213864,\"interestExpense\":62696,\"profitBeforeTax\":-199449,\"taxExpense\":0,\"profitAfterTax\":-199449,\"cash\":475281,\"tradeReceivables\":742058,\"inventory\":993210,\"currentAssets\":2392210,\"nonCurrentAssets\":1241008,\"totalAssets\":3633218,\"tradePayables\":412852,\"borrowings\":1139919,\"currentLiabilities\":1009646,\"totalLiabilities\":2062406,\"totalEquity\":1570812,\"operatingCashFlow\":-30647,\"capitalExpenditure\":180741,\"borrowingsRepaid\":197291},\"ratiosAndMetrics\":{\"profitability\":{\"grossProfitMargin\":0.1596,\"operatingProfitMargin\":-0.0329,\"ebitda\":77111,\"ebitdaMargin\":0.0186,\"operatingExpenseRatio\":0.1925,\"netProfitMargin\":-0.048,\"taxEfficiencyRatio\":null},\"liquidityAndCashFlow\":{\"quickRatio\":1.3856,\"cashRatio\":0.4707,\"cashToRevenueRatio\":0.1144,\"operatingCashFlow\":-30647,\"operatingCashFlowMargin\":-0.0074,\"freeCashFlow\":-211388,\"accrualRatio\":-0.0465},\"operationalEfficiency\":{\"cashConversionCycle\":125.8175,\"daysSalesOutstanding\":65.1682,\"daysInventoryOutstanding\":103.7937,\"daysPayablesOutstanding\":43.1444,\"inventoryTurnover\":3.5166,\"receivablesTurnover\":5.6009,\"assetTurnoverRatio\":1.1439,\"netWorkingCapital\":1382564},\"capitalStructure\":{\"leverageRatio\":1.313,\"interestCoverageRatio\":-2.1812,\"fixedAssetComposition\":0.3416,\"depreciationToAssetRatio\":0.0589,\"debtServiceCoverageRatio\":0.2966}}}]},\"litigation\":{\"cases\":[]}}"
+      }
+    ],
+    "temperature": 0.0,
+    "max_tokens": 4096
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "**Verdict:** Review: Company shows net losses and debt service strain in its only financial year.\n\n**Key risks:**\n- Net loss of -RM 199.4k in FY2024.\n- Negative operating cash flow of -RM 30.6k in FY2024.\n- Debt service strain in FY2024 with interest coverage -2.18x and debt service coverage 0.30x.\n\n**Financials:** FY2024: revenue RM 4.16m, profit after tax -RM 199.4k, equity RM 1.57m, quick ratio 1.39; no financial statements filed for prior years.\n\n**People and ownership:** Directors are Director 1, Director 2, Director 3 and Director 4. Recent appointments include Director 2 on 2025-06-26 and Director 4 on 2025-05-06. Shareholders are Director 2, Director 3, Director 4 and Director 1. There is no corporate parent.\n\n**Data gaps:** Only FY2024 statements; no trend available.",
+          "extra_content": {
+            "google": {
+              "thought_signature": "Eo4BCosBAWkUfRNalvjVmgtOmKZWY8Zx4CwRFKxKSXGnYr9dS+qNcY388WrcAjxYYwXnNeUj2TjEJL8G8CO/HiRwxWIm8ktrYWcJOcKTOufa4yNKZkZZUWIHH5G+/yhHEqpM0YOZp4U/d+8xdSnv3PQq1iQ4+cLk1wC3hd76FGWlCKKGQWAZ9WkTCloiYRG4gw=="
+            }
+          },
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1795392985,
+    "id": "1oUDa9KENJXOz7sPsebYmQ8",
+    "model": "gemini-3.5-flash-lite",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 1930,
+      "total_tokens": 2186
+    }
+  }
+}

@@ -1,0 +1,38 @@
+version,sample,registrationNumber,flag,snippet,agent_judgement,notes
+v1,hit,SYN-001560,NET_LOSS,"  rm4.16 million       profitability:   net loss of   -rm199,449   (gross profit margin:",correct,snippet supports the flag
+v1,hit,SYN-000545,DEFENDANT_PENDING,"0,500 debt recovery claim   and several ongoing breach of contract suits.      historic",correct,snippet supports the flag
+v1,hit,SYN-001298,NET_LOSS,it: 15.66m myr).       profitability:   net loss of   -3.66m myr   (operating profit: -2,correct,snippet supports the flag
+v1,hit,SYN-000217,WEAK_LIQUIDITY,"     liquidity & working capital:   the quick ratio dipped slightly below 1.0 in 2024 (0.95), and net working cap",correct,snippet supports the flag
+v1,hit,SYN-000802,NET_LOSS,"fitability:   the company operated at a net loss for the period, reporting an   operatin",correct,snippet supports the flag
+v1,hit,SYN-000802,NEGATIVE_OPERATING_CASH_FLOW," negative at   -rm1.73m  , resulting in negative free cash flow (-rm2.65m).     leverage:   total ",correct,snippet supports the flag
+v1,hit,SYN-001472,HIGH_LEVERAGE,"onents space. however, because of their elevated leverage and tight liquidity buffers, procuremen",correct,snippet supports the flag
+v1,hit,SYN-001212,STATUS_NOT_ACTIVE,"al status:   officially listed under   ""winding up""  , indicating severe insolvency or liq",correct,snippet supports the flag
+v1,hit,SYN-000785,REVENUE_DECLINE,ts        revenue & margins:            revenue has steadily declined over the past three years:   myr 15.4,correct,snippet supports the flag
+v1,hit,SYN-001618,WEAK_LIQUIDITY,by heavy operating expenses.      cash flow & liquidity:         negative operating cash flow: ,correct,pattern matched 'low' inside 'flow' (bug); summary does say 'tight short-term liquidity' elsewhere
+v1,hit,SYN-000510,REVENUE_DECLINE,ealth & trends (fy2022 – fy2024)        revenue & profitability (declining trend):         revenue   dropped st,correct,snippet supports the flag
+v1,hit,SYN-000451,NET_LOSS,2.08m (fy2024).     deepening losses:   net losses have worsened year-over-year:     fy2,correct,snippet supports the flag
+v1,miss,SYN-001389,HIGH_LEVERAGE,,missed_by_pattern,"'pushing the leverage ratio up to 2.50': number given, no word like 'high'"
+v1,miss,SYN-000785,DEBT_SERVICE_STRAIN,,true_miss,no mention of interest or debt service coverage
+v1,miss,SYN-000217,HIGH_LEVERAGE,,true_miss,"mentions borrowings rising and 'healthy' interest cover, not the 2.65x leverage"
+v1,miss,SYN-000923,DEBT_SERVICE_STRAIN,,true_miss,no mention of interest or debt service coverage
+v1,miss,SYN-001294,DEBT_SERVICE_STRAIN,,true_miss,no mention of interest or debt service coverage
+v1,miss,SYN-000148,HIGH_LEVERAGE,,missed_by_pattern,'increasing the leverage ratio to 2.62'
+v1,miss,SYN-001529,HIGH_LEVERAGE,,missed_by_pattern,'resulting in a leverage ratio of 2.10'
+v1,miss,SYN-000511,DEBT_SERVICE_STRAIN,,true_miss,no mention of interest or debt service coverage
+v1,miss,SYN-000067,DEBT_SERVICE_STRAIN,,true_miss,no mention of interest or debt service coverage
+v1,miss,SYN-001455,DEBT_SERVICE_STRAIN,,missed_by_pattern,'debt-servicing capability remains relatively tight'
+v1,miss,SYN-000677,HIGH_LEVERAGE,,missed_by_pattern,"'pushing the leverage ratio to 2.03', but the summary also calls the company low financial risk"
+v1,miss,SYN-000148,DEBT_SERVICE_STRAIN,,true_miss,no mention of interest or debt service coverage
+v2,hit,SYN-000923,DEBT_SERVICE_STRAIN, verdict:   review: falling revenue and debt service strain require close monitoring.    key risks:,correct,snippet supports the flag
+v2,hit,SYN-000217,NON_CLEAN_AUDIT,dict:   high concern: significant audit disclaimer and elevated financial leverage.    key,correct,snippet supports the flag
+v2,hit,SYN-000785,NEGATIVE_OPERATING_CASH_FLOW,"14.98m to rm 13.38m, fy2023 to fy2024.  negative operating cash flow of -rm 1.76m in fy2024.  debt serv",correct,snippet supports the flag
+v2,hit,SYN-000510,REVENUE_DECLINE,  verdict:   review: revenue declined while profitability dropped despite maintaining a strong quick r,correct,snippet supports the flag
+v2,hit,SYN-000657,DEBT_SERVICE_STRAIN,n fy2024.  quick ratio 0.91 in fy2024.  debt service strain in fy2024 with interest coverage -9.15x and debt service coverage -2.46x.  ,correct,snippet supports the flag
+v2,hit,SYN-000802,DEBT_SERVICE_STRAIN,"ting cash flow of -rm 1.73m in fy2024.  debt service strain in fy2024, with interest coverage -4.01x and debt service coverage -0.29x.  ",correct,snippet supports the flag
+v2,hit,SYN-001212,REVENUE_DECLINE,"e company, claims totalling rm 479.3k.  revenue fell 21.8%, from rm 5.77m to rm 4.51m, fy202",correct,snippet supports the flag
+v2,hit,SYN-000802,NET_LOSS,  verdict:   review: company shows a net loss and cash flow strain in its only financ,correct,snippet supports the flag
+v2,hit,SYN-001212,DEFENDANT_JUDGMENT,"nding-up petition(s), 2 pending or with judgment entered, claim amounts rm 300.8k and rm",correct,"first match is in the winding-up bullet, but a separate bullet says 'Judgment entered against the company in 1 case(s)'"
+v2,hit,SYN-001298,NEGATIVE_OPERATING_CASH_FLOW,s:    net loss of -rm 3.66m in fy2024.  negative operating cash flow of -rm 1.58m in fy2024.  debt serv,correct,snippet supports the flag
+v2,hit,SYN-001389,WINDING_UP_PETITION,"  verdict:   high concern: multiple winding-up petitions, pending legal claims, and high financi",correct,snippet supports the flag
+v2,hit,SYN-001158,NET_LOSS,  verdict:   review: company shows net losses and negative operating cash flow.    ,correct,snippet supports the flag
+v2,miss,SYN-000657,WEAK_LIQUIDITY,,true_miss,"'Quick ratio 0.91 in FY2024.' with no 'below 1.0' or 'weak': number given, judgement dropped"
