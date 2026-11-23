@@ -205,11 +205,11 @@ def write_report(results: list[dict]) -> str:
         if t:
             co = sum(x == "coincidental" for x in t)
             lines.append(f"  Traced sample {len(t)}: {co} matched by coincidence to the wrong field ({_fmt(_share(co, len(t)))}).")
-        for kind in ("hit", "miss"):
+        for kind, label in (("hit", "hits"), ("miss", "misses")):
             j = d.get(f"flag_{kind}", [])
             if j:
                 good = sum(x in ("correct", "true_miss") for x in j)
-                lines.append(f"  Flag {kind}es sample {len(j)}: {good} confirmed, {len(j) - good} pattern errors.")
+                lines.append(f"  Flag {label} sample {len(j)}: {good} confirmed, {len(j) - good} pattern errors.")
 
     for r in results:
         v = r["version"]

@@ -36,11 +36,11 @@ the samples were drawn and is not in them.
 
 - **v1**: untraceable sample 22: 0 real errors, 21 checker false alarms, 1 unclear. False-alarm rate 95.5%.
   Traced sample 15: 0 matched by coincidence to the wrong field (0.0%).
-  Flag hites sample 12: 12 confirmed, 0 pattern errors.
+  Flag hits sample 12: 12 confirmed, 0 pattern errors.
   Flag misses sample 12: 7 confirmed, 5 pattern errors.
 - **v2**: untraceable sample 0: 0 real errors, 0 checker false alarms, 0 unclear. False-alarm rate n/a.
   Traced sample 15: 0 matched by coincidence to the wrong field (0.0%).
-  Flag hites sample 12: 12 confirmed, 0 pattern errors.
+  Flag hits sample 12: 12 confirmed, 0 pattern errors.
   Flag misses sample 1: 1 confirmed, 0 pattern errors.
 
 ## v1: red-flag misses (high and medium)
