@@ -62,7 +62,8 @@ def main() -> None:
         md += [f"## {reg}: {c['profile']['companyName']}", ""]
         for label, v in zip(labels, order, strict=False):
             text = summaries[v].get(reg, "(no summary yet: generate the summaries, then rebuild this sheet)")
-            md += [f"### Summary {label}", "", text, ""]
+            quoted = "\n".join("> " + line if line.strip() else ">" for line in text.splitlines())
+            md += [f"### Summary {label}", "", quoted, ""]
             sheet_rows.append({"registrationNumber": reg, "label": label, **dict.fromkeys(SCORE_COLUMNS, "")})
             key_rows.append({"registrationNumber": reg, "label": label, "version": v})
     (DOCS / "manual_review_sheet.md").write_text("\n".join(md) + "\n", encoding="utf-8")

@@ -128,7 +128,7 @@ Plus one free-text note per summary: "the biggest problem with this summary".
   "320k"), (2) reads LaTeX amounts such as "$-2.03\text{M}$", (3) skips dates written as 20.11.2017, and (4) adds
   the current ratio and claim totals by case type and status to its candidate values. A word-boundary bug in the
   flag patterns ("low" matched inside "flow") was fixed. No flag, threshold or keyword list was widened. Before the
-  fix v1 showed 22 untraceable numbers (2.4%); after, 2 (0.2%), both judged false alarms. The looser tolerance
+  fix v1 showed 22 untraceable numbers (2.4%); after, 2 (0.2%): one false alarm, one unclear. The looser tolerance
   raised the negative control from about 10% to 12 to 14%, which is reported.
 - 2026-11-23, after reading the v2 output: added one check that was not in the original plan, "Financials line
   labels its numbers" (the words revenue, profit, equity and quick ratio appear in the Financials line), because

@@ -126,8 +126,9 @@ Each part of the definition has its own check. The checks are automatic unless m
 
 **What the numbers say**
 
-- **The baseline is faithful, but it is not a triage note.** v1 rarely invents numbers: both of its untraceable
-  numbers turned out to be correct on inspection. But it runs 151 to 391 words, gives no consistent verdict, and misses
+- **The baseline is faithful, but it is not a triage note.** v1 rarely invents numbers. Of its two untraceable
+  numbers, one is correct ("over RM680k" of pending claims, which total RM 681,600). The other is a loose
+  approximation ("~60%" for a 58.7% margin). But it runs 151 to 391 words, gives no consistent verdict, and misses
   a fifth of the material flags. It says nothing about debt service in 8 of the 16 companies where that flag applies.
   It misses high leverage in 6 of 9, and in at least 4 of those it gives the ratio without calling it high. For
   SYN-001203, which has no financial statements, v1 answers "Worth a closer look? Yes" and calls it "a well-established
@@ -147,8 +148,9 @@ Each part of the definition has its own check. The checks are automatic unless m
   since a model can drop flags, but it is not independent evidence that the flags are the right ones. Only v1's recall
   is an independent measurement of what a model notices unaided.
 - **The number checker is lenient by design, and the negative control measures the cost.** Each summary is also
-  scored against the next company's record, and 12 to 15% of its numbers still "match". Each record has hundreds of
-  values, and rounded numbers often coincide. So a wrong number has roughly a 1 in 7 chance of passing. Zero
+  scored against the next company's record, and 12 to 15% of its numbers still "match" (11.9%, 13.1% and 13.5% if
+  the rule thresholds "1.0", "1.5" and "10%", which match for every company, are left out). Each record has hundreds
+  of values, and rounded numbers often coincide. So a wrong number has roughly a 1 in 8 chance of passing. Zero
   untraceable numbers in v3 is strong evidence of faithfulness, not proof.
 - **Hand checks (done by the Claude Code agent that built the system, not by Aaron).** Samples are drawn with a fixed
   seed (`uv run python -m evaluation.handcheck`), and the judgements are in `results/handcheck_*.csv`.
@@ -157,7 +159,8 @@ Each part of the definition has its own check. The checks are automatic unless m
     had a false-alarm rate of about 95%. The main cause: the model **truncates** rather than rounds (320,578 written
     as "320k"; 14 cases). The rest were LaTeX amounts, a date written as 20.11.2017, and correct sums the checker did
     not know about. The checker was then fixed (disclosed in the definition's change log), which left 2 flagged in v1,
-    both also judged false alarms. v2 and v3 had nothing flagged, so their false-alarm rate cannot be estimated.
+    the same two judged above (one false alarm, one unclear). v2 and v3 had nothing flagged, so their false-alarm rate
+    cannot be estimated. v3 was not in the hand-check samples (it was generated after they were drawn).
   - **Traced numbers.** 30 numbers the checker accepted (15 from v1, 15 from v2) were checked against the field it
     matched. All 30 were right. In 3 the match was to a different field with the same value (for example profit before
     tax equal to profit after tax).

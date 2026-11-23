@@ -187,6 +187,12 @@ def write_report(results: list[dict]) -> str:
         lines.append(f"| {label} | " + " | ".join(vals) + " |")
 
     lines += ["", "## Hand checks (done by the Claude Code agent, not by Aaron)", ""]
+    lines += [
+        "Samples were drawn from the checker's output before the checker fixes logged in docs/definition_of_good.md,",
+        "so the untraceable sample (22 v1 numbers) is larger than the current untraceable count. v3 was generated after",
+        "the samples were drawn and is not in them.",
+        "",
+    ]
     if not hc:
         lines.append("Not filled in yet. Run `uv run python -m evaluation.handcheck` and fill the `agent_judgement` column.")
     for version, d in sorted(hc.items()):

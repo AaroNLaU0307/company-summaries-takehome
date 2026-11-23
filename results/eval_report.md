@@ -30,6 +30,10 @@ All versions are scored on the same 50 companies (those present in every version
 
 ## Hand checks (done by the Claude Code agent, not by Aaron)
 
+Samples were drawn from the checker's output before the checker fixes logged in docs/definition_of_good.md,
+so the untraceable sample (22 v1 numbers) is larger than the current untraceable count. v3 was generated after
+the samples were drawn and is not in them.
+
 - **v1**: untraceable sample 22: 0 real errors, 21 checker false alarms, 1 unclear. False-alarm rate 95.5%.
   Traced sample 15: 0 matched by coincidence to the wrong field (0.0%).
   Flag hites sample 12: 12 confirmed, 0 pattern errors.
