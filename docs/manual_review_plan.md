@@ -1,7 +1,8 @@
 # Manual review plan (picked before any summary was generated)
 
-Who: Aaron. The agent that built the system must not fill this in, and nothing here is labelled "manual" unless a
-person did it. Time: about 30 to 40 minutes.
+Who: planned for Aaron. In the end the first pass was scored by a separate Claude agent that had not built the system
+(blind to the version key), and Aaron reviewed all its scores and notes and agreed with them. The agent that built
+the system did not fill this in.
 
 ## The ten companies
 

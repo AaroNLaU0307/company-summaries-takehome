@@ -1,6 +1,6 @@
 # What a good summary is (written before any summary was generated)
 
-Status: draft, pending Aaron's approval. This file was committed before any prompt, model call or summary existed, so
+Status: accepted by Aaron without changes (24 Nov 2026). This file was committed before any prompt, model call or summary existed, so
 the git history shows the definition came first. Any later change to it, to the thresholds or to the keyword lists in
 `evaluation/` is listed in the change log at the bottom and disclosed in `CASE_STUDY.md`.
 
@@ -101,7 +101,7 @@ are context, not red flags.
 | No contradictions | Simple patterns that contradict the facts, for example "no litigation" when the company is a defendant, or "profitable" when the latest year is a loss. | automatic |
 | Correct verdict | For versions that state a verdict, it must match the computed triage level. | automatic |
 | Short and fixed in shape | Word count between 80 and 150; the five section labels present in order. | automatic |
-| Useful and clear to the reader | Ten companies, picked in advance (see `docs/manual_review_plan.md`), scored by a person with the rubric below. | manual (Aaron) |
+| Useful and clear to the reader | Ten companies, picked in advance (see `docs/manual_review_plan.md`), scored with the rubric below. | agent first pass (blind), reviewed by Aaron |
 
 ## Manual review rubric (0, 1 or 2 per criterion)
 

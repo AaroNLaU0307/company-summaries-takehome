@@ -1,21 +1,21 @@
 registrationNumber,label,faithful_0_2,red_flags_0_2,verdict_0_2,readable_0_2,biggest_problem
-SYN-000029,A,,,,,
-SYN-000029,B,,,,,
-SYN-000546,A,,,,,
-SYN-000546,B,,,,,
-SYN-001389,A,,,,,
-SYN-001389,B,,,,,
-SYN-000397,A,,,,,
-SYN-000397,B,,,,,
-SYN-000545,A,,,,,
-SYN-000545,B,,,,,
-SYN-000451,A,,,,,
-SYN-000451,B,,,,,
-SYN-000785,A,,,,,
-SYN-000785,B,,,,,
-SYN-000217,A,,,,,
-SYN-000217,B,,,,,
-SYN-001203,A,,,,,
-SYN-001203,B,,,,,
-SYN-001298,A,,,,,
-SYN-001298,B,,,,,
+SYN-000029,A,1,2,2,1,Calls leverage of 0.81 moderate-to-high and says Director 4 holds an executive role; long profile layout
+SYN-000029,B,2,2,2,2,Verdict reason oddly lists recent director appointments as a reason for low concern
+SYN-000546,A,2,2,2,2,Says solid recovery but never shows the FY2022 and FY2023 losses behind it
+SYN-000546,B,2,2,2,1,Verdict buried at the end of a long profile with hype words like robust
+SYN-001389,A,0,1,1,1,Calls 1.03 the current ratio when it is the quick ratio (current 1.20); never counts the 3 winding-up petitions
+SYN-001389,B,2,2,2,2,Winding-up line does not say which petition is still pending (RM 50.1k)
+SYN-000397,A,2,2,2,2,Omits the settled RM 7.43m debt recovery case from the dispute history
+SYN-000397,B,1,2,1,1,Files the two judgments under resolved cases and leads the concern with a settled case
+SYN-000545,A,1,2,2,2,Verdict says active insolvency petitions but neither petition is pending
+SYN-000545,B,2,1,2,2,Winding-up petitions and pending cases given without counts or claim totals
+SYN-000451,A,2,2,2,2,Does not mention the dismissed RM 106.9k case against the company
+SYN-000451,B,2,2,2,1,Long profile layout; debt service coverage of -0.81x not stated
+SYN-000785,A,0,1,2,1,Claims operating expenses exceeded revenue in 2024 (RM 11.65m vs RM 13.38m); omits debt service strain
+SYN-000785,B,1,2,2,2,Calls 2023 director appointments recent though they are outside the last 12 months
+SYN-000217,A,2,2,2,2,No material problem found; every number and flag checks out
+SYN-000217,B,1,1,1,1,Leans positive on a High concern company and omits the 2.65x leverage flag
+SYN-001203,A,2,2,2,2,Does not label Gemilang Holdings as the corporate parent; bracket tag adds clutter
+SYN-001203,B,1,2,1,1,Says yes worth a look with unsupported praise despite no financial statements
+SYN-001298,A,2,2,2,2,Does not say the company is under 3 years old
+SYN-001298,B,2,1,1,1,Omits debt service strain and the one-year-only gap; tone leans positive

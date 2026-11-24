@@ -43,7 +43,7 @@ director departures (only current directors are listed), and anything after FY20
 The full definition, the flag table, the thresholds and the rubric are in
 [`docs/definition_of_good.md`](docs/definition_of_good.md). It was committed before any prompt or model call (the first
 commit after the template). Its change log lists every later change to the evaluation code, and why.
-[PLACEHOLDER: Aaron to confirm he has read and approved the definition.]
+Aaron read the definition and accepted it without changes before the review below.
 
 ## 2. What you built
 
@@ -178,12 +178,35 @@ Each part of the definition has its own check. The checks are automatic unless m
 
 ### Manual review
 
-[PLACEHOLDER: Aaron's results go here once he has scored the sheet. Ten companies were picked in advance from the facts
-sheet, before any generation: 2 clean, 3 litigated (one of them winding up), 2 loss-making, 1 non-clean audit, 1 with
-no financial statements, 1 young company (`docs/manual_review_plan.md`). Each has a v1 and a v3 summary, labelled A
-and B in random order (`docs/manual_review_sheet.md`). The rubric scores faithful, red flags, verdict and readability
-at 0 to 2 each. The blinding is weak, because v1 is three times longer and easy to spot. Results:
-`uv run python -m evaluation.manual_score` writes `results/manual_review_results.md`.]
+Ten companies were picked in advance from the facts sheet, before any generation: 2 clean, 3 litigated (one of them
+winding up), 2 loss-making, 1 non-clean audit, 1 with no financial statements, 1 young company
+(`docs/manual_review_plan.md`). Each has a v1 and a v3 summary, labelled A and B in random order
+(`docs/manual_review_sheet.md`), scored 0 to 2 on faithful, red flags, verdict and readability.
+
+**Who scored it.** The first pass was done by a separate Claude agent that had not built the system and could not
+see the version key, the case study or the automatic results; it checked each summary against the raw record. Aaron
+then reviewed all 20 scores and notes against the records and agreed with them. So this is an agent review with a
+human check, not an independent human panel. The blinding is weak, because v1 is three times longer and easy to spot.
+
+| Version | Faithful | Red flags | Verdict | Readable | Total (of 8) |
+|---|---|---|---|---|---|
+| v1 | 1.20 | 1.50 | 1.50 | 1.10 | 5.30 |
+| v3 | 1.80 | 2.00 | 2.00 | 2.00 | 7.80 |
+
+What the review found that the automatic checks did not:
+
+- **v3 still makes factual errors that are not numbers.** On SYN-000545 the verdict says "active insolvency
+  petitions", but both petitions are closed (withdrawn, and judgment entered). On SYN-000785 it calls two 2023
+  appointments "recent", outside the 12-month window. The number checker passed both, because every number in them
+  is right. This is the clearest case for a check on dates and case status, not only on numbers.
+- **v1's errors are mislabelled or wrong figures and a misleading tone.** It called a quick ratio the current ratio
+  (SYN-001389), said operating expenses exceeded revenue when they did not (SYN-000785), filed two lost judgments
+  under "resolved" (SYN-000397), and praised a company with no financial statements as "well-established"
+  (SYN-001203).
+- **v3 never got the verdict wrong** on these ten; v1 leaned positive on two High or Review companies.
+
+Scores and notes: `docs/manual_review_sheet.csv`; unblinded summary: `results/manual_review_results.md`
+(`uv run python -m evaluation.manual_score`).
 
 ## 4. What you'd do next, and how you'd keep improving it
 
@@ -225,6 +248,7 @@ at 0 to 2 each. The blinding is weak, because v1 is three times longer and easy 
 ## AI tools used
 
 The code, experiments and first draft of this case study were produced by Claude Code (Anthropic) agents working
-under Aaron's direction. Aaron set the task, [PLACEHOLDER: approved the definition of a good summary,] and
-[PLACEHOLDER: did the manual review]. The summaries themselves were written by `gemini-3.5-flash-lite` as described
+under Aaron's direction. Aaron set the task, accepted the definition of a good summary,
+and reviewed the agent's scoring of the ten review companies. The first pass of that review was also done by a Claude
+agent (a separate one that had not built the system). The summaries themselves were written by `gemini-3.5-flash-lite` as described
 above.
